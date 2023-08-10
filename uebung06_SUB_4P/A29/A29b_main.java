@@ -1,4 +1,4 @@
-package uebung06_SUB_4P.A29;
+package uebung06_sub_4P.A29;
 
 
 // Necessary packages/classes:

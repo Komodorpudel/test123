@@ -1,4 +1,4 @@
-package uebung07_SUB_4P.A34;
+package uebung07_sub_4P.A34;
 
 
 // Implementieren Sie ein Hauptanwendungsfenster MouseHighlighter.java nach folgenden Vorgaben:

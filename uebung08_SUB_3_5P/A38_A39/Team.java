@@ -1,4 +1,4 @@
-package uebung08_SUB_3_5P.A38_A39;
+package uebung08_sub_3_5P.A38_A39;
 
 
 import java.util.HashSet;

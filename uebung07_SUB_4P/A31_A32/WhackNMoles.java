@@ -1,4 +1,4 @@
-package uebung07_SUB_4P.A31_A32;
+package uebung07_sub_4P.A31_A32;
 
 
 // Implementieren Sie ein Hauptanwendungsfenster WhackNMoles.java nach folgenden Vorgaben:

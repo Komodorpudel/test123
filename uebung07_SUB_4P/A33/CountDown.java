@@ -1,4 +1,4 @@
-package uebung07_SUB_4P.A33;
+package uebung07_sub_4P.A33;
 
 
 // Implementieren Sie eine Hauptprogrammklasse CountDown, die

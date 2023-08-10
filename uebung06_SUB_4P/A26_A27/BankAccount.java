@@ -1,4 +1,4 @@
-package uebung06_SUB_4P.A26_A27;
+package uebung06_sub_4P.A26_A27;
 
 
 // Aufgabenstellung:

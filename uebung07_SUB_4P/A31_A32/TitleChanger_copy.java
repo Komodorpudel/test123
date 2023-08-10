@@ -1,4 +1,4 @@
-package uebung07_SUB_4P.A31_A32;
+package uebung07_sub_4P.A31_A32;
 
 // package blatt07;
 import javax.swing.JFrame;

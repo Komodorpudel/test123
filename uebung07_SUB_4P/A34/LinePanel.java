@@ -1,3 +1,4 @@
+package uebung07_sub_4P.A34;
 
 // Implementieren Sie eine Zeichenfl¨ache LinePanel.java nach folgenden Vorgaben:
     // 1. Die Zeichenfl¨ache soll eine Gr¨oße von 300 × 300 Pixel vorziehen.
