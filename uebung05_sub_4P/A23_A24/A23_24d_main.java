@@ -1,4 +1,4 @@
-package uebung05.A23_A24;
+package uebung05_sub_4P.A23_A24;
 
 // Necessary packages/classes:
 import java.util.InputMismatchException;

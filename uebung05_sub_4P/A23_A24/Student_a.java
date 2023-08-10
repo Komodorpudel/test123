@@ -1,7 +1,7 @@
-package uebung05.A23_A24;
+package uebung05_sub_4P.A23_A24;
 
-// Identisch zu Student_c
-public class Student_c {
+
+public class Student_a {
 
     // --------------------------------------
 
@@ -13,7 +13,7 @@ public class Student_c {
     // --------------------------------------
 
     // Konstruktur:
-    public Student_c(String name, int matrikelNummer) {
+    public Student_a(String name, int matrikelNummer) {
         // Man könnte auch this.name = name etc. verwenden,
         // aber dann wäre die Prüfung des Namens und Zeichenkette über set unten nicht möglich
         setName(name);
