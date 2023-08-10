@@ -1,4 +1,4 @@
-package src.blatt12;
+package uebung12_NS;
 
 import java.text.ParseException;
 import java.util.ArrayList;
