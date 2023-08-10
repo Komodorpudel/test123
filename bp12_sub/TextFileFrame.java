@@ -1,4 +1,4 @@
-package src.blatt12;
+package bp12_sub;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
