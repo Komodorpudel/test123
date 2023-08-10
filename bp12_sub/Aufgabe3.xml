@@ -1,0 +1,21 @@
+<school>
+  <name>XYZ High School</name>
+  <location>Cityville</location>
+  <students>
+    <student>
+      <name>John Doe</name>
+      <age>16</age>
+      <grade>10th</grade>
+    </student>
+    <student>
+      <name>Jane Smith</name>
+      <age>15</age>
+      <grade>9th</grade>
+    </student>
+    <student>
+      <name>Mark Johnson</name>
+      <age>17</age>
+      <grade>11th</grade>
+    </student>
+  </students>
+</school>

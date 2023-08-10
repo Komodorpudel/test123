@@ -1,3 +1,5 @@
+package uebung07_SUB_4P.A33;
+
 
 // Implementieren Sie ein Hauptanwendungsfenster DontMinimizeMe.java nach folgenden Vorgaben:
     // 1. Zu Beginn soll das Fenster den Titel "Don't minimize me!" tragen.

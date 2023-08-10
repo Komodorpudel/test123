@@ -1,0 +1,11 @@
+// Erzeugen des KeyStroke-Objekts für "Strg+C"
+KeyStroke copyKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.CTRL_DOWN_MASK);
+// Binden der Tastenkombination an die Aktion "copy"
+InputMap IM = getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
+IM.put(copyKeyStroke, "copy");
+getRootPane().getActionMap().put("copy", new AbstractAction() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        copyToClipboard();
+    }
+});

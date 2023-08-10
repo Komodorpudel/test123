@@ -1,3 +1,5 @@
+package uebung07_SUB_4P.A33;
+
 
 // Implementieren Sie ein Hauptanwendungsfenster KeyCounter.java nach folgenden Vorgaben:
     // 1. Das Fenster soll zu Beginn den Titel "KeyCounter: 0" tragen.

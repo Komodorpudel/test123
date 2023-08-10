@@ -1,0 +1,35 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>180</y><w>570</w><h>410</h></coordinates><panel_attributes>BankAccount
+--
+- accountHolderName: String
+- accountNumber: String
+- openingDate: LocalDate (final, default=LocalDate.now())
+- balance: double (default=0)
+
+--
++ BankAccount(accountHolderName: String, accountNumber: String)
+
+- checkAccountHolderName(in accountHolderName: String): boolean (static)
+- checkAccountNumber(in accountNumber: String): boolean (static)
+
++ setAccountHolderName(in accountHolderName: String): void {IllegalArgumentException}
+
++ addBalance(in value: double): void
+- setAccountNumber(in accountNumber: String): void {IllegalArgumentException}
+
++ getAccountHolderName(): String
++ getAccountNumber(): String
++ getBalance(): double
++ getOpeningDate(): LocalDate
+
++ toString(): String
++ equals(in o: Object): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>180</y><w>700</w><h>410</h></coordinates><panel_attributes>Bank
+--
+- bankAccounts: HashSet&lt;BankAccount&gt; (final)
+
+--
++ createBankAccount(accountHolderName: String, accountNumber: String): void {IllegalBankingException}
+
++ getBalanceByHolder(in accountHolderName: String): double
++ addBalance(in accountNumber: String, in amount: double): double {IllegalBankingException}
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

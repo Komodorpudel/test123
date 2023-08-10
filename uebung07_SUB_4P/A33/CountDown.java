@@ -1,3 +1,5 @@
+package uebung07_SUB_4P.A33;
+
 
 // Implementieren Sie eine Hauptprogrammklasse CountDown, die
     // 1. mithilfe eines Eingabe-Dialogs um die Eingabe einer naturlichen Zahl bittet und ¨

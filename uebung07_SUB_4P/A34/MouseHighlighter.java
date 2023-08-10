@@ -1,3 +1,5 @@
+package uebung07_SUB_4P.A34;
+
 
 // Implementieren Sie ein Hauptanwendungsfenster MouseHighlighter.java nach folgenden Vorgaben:
     // 1. Das Fenster soll den Titel "Mouse Highlighter" tragen.

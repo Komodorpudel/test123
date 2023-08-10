@@ -1,0 +1,52 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>190</x><y>460</y><w>210</w><h>70</h></coordinates><panel_attributes>Stammtisch
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>460</y><w>210</w><h>120</h></coordinates><panel_attributes>Restaurant
+--
+- category: String
+- name: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>710</y><w>290</w><h>300</h></coordinates><panel_attributes>Gast
+--
+_+ status: String = "König"_
+--
++ linkStammtisch(in s: Stammtisch)
++ unlinkStammtisch(in s: Stammtisch)
++ getlinkStammtisch(): Stammtisch [0..*]
++ getStammtisch(in i: Integer): Stammtisch 
+
++ linkBestellung(in b: Bestellung)
++ unlinkBestellung(in b: Bestellung)
++ getlinkBestellung(): Bestellung [0..*]
++ getBestellung(in i: Integer): Bestellung
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>900</y><w>260</w><h>130</h></coordinates><panel_attributes>Bestellung
+--
+- isPrepared: Boolean
+--
++ getIsPrepared(): Boolean
++ setIsPrepared(in b: Bestellung)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>520</y><w>90</w><h>210</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+r1= - Gäste
+m1=[3..*]
+m2=[0..*]
+besucht ^</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>860</y><w>230</w><h>190</h></coordinates><panel_attributes>lt=-&gt;
+m1=
+r2= - Bestellungen
+m2=[1..*]
+bestellt &gt;</panel_attributes><additional_attributes>10;10;140;170</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>450</y><w>160</w><h>150</h></coordinates><panel_attributes>lt=-&gt;&gt;&gt;&gt;
+r1= -Stammtische
+m1=[0..*]
+m2=
+gehört zu &gt;</panel_attributes><additional_attributes>10;10;140;130</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>570</y><w>180</w><h>300</h></coordinates><panel_attributes>lt=&lt;-
+r1=-Gäste
+m1=[0..100]
+m2=
+besucht ^</panel_attributes><additional_attributes>10;280;160;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>630</y><w>100</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Rechnung</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>670</y><w>60</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>40;10;10;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>360</y><w>100</w><h>30</h></coordinates><panel_attributes>Mitarbeiter
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>240</y><w>220</w><h>120</h></coordinates><panel_attributes>Keller
+--
+--
++ bedienen(): void
++ essenServieren(): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>630</y><w>100</w><h>30</h></coordinates><panel_attributes>SimpleClass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>240</y><w>210</w><h>110</h></coordinates><panel_attributes>Koch
+--
+- Rezepte: Liste von Rezepten
+--
+- zubereiten(in: Bestellung): Gericht</panel_attributes><additional_attributes></additional_attributes></element></diagram>

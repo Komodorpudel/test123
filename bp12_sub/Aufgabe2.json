@@ -1,0 +1,50 @@
+{
+  "hogwarts": {
+    "house": [
+      {
+        "name": "Gryffindor",
+        "founder": "Godric Gryffindor",
+        "common_room": "Gryffindor Tower",
+        "values": [
+          "Courage",
+          "Bravery",
+          "Nerve",
+          "Chivalry"
+        ]
+      },
+      {
+        "name": "Ravenclaw",
+        "founder": "Rowena Ravenclaw",
+        "common_room": "Ravenclaw Tower",
+        "values": [
+          "Intelligence",
+          "Wit",
+          "Wisdom",
+          "Creativity"
+        ]
+      },
+      {
+        "name": "Hufflepuff",
+        "founder": "Helga Hufflepuff",
+        "common_room": "Hufflepuff Basement",
+        "values": [
+          "Hard Work",
+          "Dedication",
+          "Patience",
+          "Loyalty"
+        ]
+      },
+      {
+        "name": "Slytherin",
+        "founder": "Salazar Slytherin",
+        "common_room": "Slytherin Dungeon",
+        "values": [
+          "Ambition",
+          "Cunning",
+          "Resourcefulness",
+          "Purity"
+        ]
+      }
+    ]
+  }
+}
