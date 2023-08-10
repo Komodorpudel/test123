@@ -3,6 +3,8 @@ package uebung12_NS;
 import java.text.ParseException;
 import java.util.ArrayList;
 
+import src.blatt12.WrongFormatException;
+
 public class SimpleXMLParser {
     private final static String dateiAnfang = "<teilnehmer>";
     private final static String dateiEnde = "</teilnehmer>";
