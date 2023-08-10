@@ -1,3 +1,5 @@
+package uebung05.A23_A24;
+
 
 public class Student_a {
 

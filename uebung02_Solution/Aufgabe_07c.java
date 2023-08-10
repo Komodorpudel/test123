@@ -1,3 +1,5 @@
+package uebung02_Solution;
+
 
    import java.util.Random;
    public class Aufgabe_07c {

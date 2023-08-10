@@ -1,3 +1,5 @@
+package uebung05.A23_A24;
+
 // Identisch zu Student_c
 public class Student_c {
 

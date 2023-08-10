@@ -1,3 +1,5 @@
+package uebung05.A23_A24;
+
 // Teilaufgabe c.1. Erstellen Sie eine eigene gepr¨ufte Ausnahme DuplicateException als Unterklasse
 //                  von Exception.
 

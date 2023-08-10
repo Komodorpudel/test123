@@ -1,3 +1,5 @@
+package uebung05.A23_A24;
+
 // Necessary packages/classes:
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -1,3 +1,5 @@
+package uebung02_NS;
+
 import java.util.Scanner;
 
 // --------------------------------------

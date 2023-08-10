@@ -1,3 +1,5 @@
+package uebung03_submittedWrong;
+
 public class Aufgabe_12b {
 
     // --------------------------------------

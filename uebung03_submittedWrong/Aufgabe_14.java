@@ -1,3 +1,5 @@
+package uebung03_submittedWrong;
+
 import java.util.Random;
 
 public class Aufgabe_14 {

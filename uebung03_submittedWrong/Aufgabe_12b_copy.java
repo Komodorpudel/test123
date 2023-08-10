@@ -1,3 +1,5 @@
+package uebung03_submittedWrong;
+
 public class Aufgabe_12b_copy {
     public static void main(String[] args) {
         CharSequence stringSequence = "This.is.a.String";

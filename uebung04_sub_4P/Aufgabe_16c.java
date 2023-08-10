@@ -1,3 +1,5 @@
+package uebung04_sub_4P;
+
 // Necessary packages/classes:
 import java.time.LocalTime;
 import java.time.Duration;
