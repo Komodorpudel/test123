@@ -24,10 +24,10 @@ public class TextFileFrame extends JFrame implements ActionListener {
         JButton writeButton = new JButton("Write to file");
         writeButton.addActionListener(this);
         add(writeButton, BorderLayout.EAST);
-       /* TODO
+       /* TO-DO
        *   writer initialisieren */
         addWindowListener(new WindowAdapter() {
-            /* TODO
+            /* TO-DO
             *   writer schliessen wenn das Fenster geschlossen wird */
         });
         pack();
@@ -36,7 +36,7 @@ public class TextFileFrame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        /* TODO
+        /* TO-DO
         *   Inhalt von textField in neuer Zeile in Datei schreiben */
     }
 

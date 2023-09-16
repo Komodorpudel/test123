@@ -27,7 +27,7 @@ public class SimpleXMLParser {
 
     public static void parseTeilnehmerFile(String filename) throws WrongFormatException {
         ArrayList<Integer> matrikelnummern = new ArrayList<>();
-        /* TODO
+        /* TO-DO
         *   - Datei filename oeffnen
         *   - Sicherstellen, dass Datei mit dateiAnfang beginnt, sonst WrongFormatException werfen
         *   - Zeilen einlesen:

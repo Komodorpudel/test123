@@ -48,7 +48,7 @@ public class Library {
     // SAH: findBooksbyAuthor
     public List<Book> findBooksByAuthor(String author) {
 
-        // TODO Rückgabewert per Stream ermitteln
+        // TO-DO Rückgabewert per Stream ermitteln
         return books.stream() // Convert list into a stream
                     .filter(book -> book.getAuthor().equals(author)) // filters the list for true
                     .toList();
@@ -59,7 +59,7 @@ public class Library {
 
     // SAH: findBooksPublishedAfter
     public List<Book> findBooksPublishedAfter(int year) {
-        // TODO Rückgabewert per Stream ermitteln
+        // TO-DO Rückgabewert per Stream ermitteln
         return books.stream() // Convert list into a stream
                     .filter(book -> book.getYear() > year) // filters the list for true
                     .collect(Collectors.toList()); //Terminal: converts stream into a new list
@@ -69,7 +69,7 @@ public class Library {
 
     // SAH: displayBooks
     public void displayBooks() {
-        // TODO Ausgabe aller Bücher unter Verwendung einer Methoden-Referenz von system.print (eine Codezeile!)
+        // TO-DO Ausgabe aller Bücher unter Verwendung einer Methoden-Referenz von system.print (eine Codezeile!)
         books.forEach(System.out::println);
 
         // System.out::println ist eine Methodenreferenz, die in Verbindung mit der forEach()-
@@ -81,7 +81,7 @@ public class Library {
 
     // SAH: borrowBook
     public Book borrowBook(Book book) throws BookNotFoundException {
-        // TODO's:
+        // TO-DO's:
         //        - BookNotFoundException werfen wenn das Buch nicht gefunden wurde
         //        - BookNotFoundException werfen, wenn das Buch schon verliehen ist
         //        - Ansonsten Buch als ausgeliehen markieren
@@ -107,7 +107,7 @@ public class Library {
 
     // SAH: returnBook
     public Book returnBook(Book book) throws BookNotFoundException {
-        // TODO's:
+        // TO-DO's:
         //        - BookNotFoundException werfen, wenn das Buch nicht gefunden wurde
         //        - BookNotFoundException werfen, wenn das Buch gar nicht verliehen ist
         //        - Ansonsten Buch als nicht ausgeliehen markieren

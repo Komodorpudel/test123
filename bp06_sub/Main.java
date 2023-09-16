@@ -15,7 +15,7 @@ public class Main {
 
         Library library = new Library();
 
-        // TODO Kommentar
+        // TO-DO Kommentar
         // SAH: Erstellt eine neue Liste newBooks mit 5 verschiedenen Büchern
         List<Book> newBooks = List.of(
                 new Book("Java Programming", "John Doe", 2010),
@@ -27,17 +27,17 @@ public class Main {
         // SAH: Fügt die newBooks zur library hinzu indem addBooks aufgerufen wird
         library.addBooks(newBooks);
 
-        // TODO Kommentar
+        // TO-DO Kommentar
         // SAH: Fügt ein weiteres neues Buch hinzu
         library.addBook(new Book("1984", "George Orwell", 1949));
 
-        // TODO Kommentar
+        // TO-DO Kommentar
         // SAH: Printed "Alle Bücher ...."
         System.out.println("Alle Bücher der Bibliothek:");
         // SAH: Ruft die Methode displayBooks der Klasse library auf
         library.displayBooks();
 
-        // TODO Kommentar
+        // TO-DO Kommentar
         // SAH: Erstellt string John Doe
         String author = "John Doe";
         // SAH: Erstellt liste nur mit Büchern von John Doe via libary method "findBooksbyAuthor"
@@ -47,7 +47,7 @@ public class Main {
         // SAH: Calls toString von jedem Buch aus der Liste:
         booksByAuthor.forEach(System.out::println);
 
-        // TODO Kommentar
+        // TO-DO Kommentar
         // SAH: Erstellt year 2012
         int year = 2012;
         // SAH: Erstellt Liste nur mit Büchern die nach/in 2012 veröffentlicht wurden via libary klassenmethode findBooksPubishedAfter
@@ -57,7 +57,7 @@ public class Main {
         // SAH: Calls toString von jedem Buch aus der Liste:
         booksPublishedAfterYear.forEach(System.out::println);
 
-        // TODO Kommentar
+        // TO-DO Kommentar
         // SAH: Erstellt neues Object book der Klasse Book -> dieses will man ausleihen
         Book book = new Book("Java Programming", "John Doe", 2010);
         // SAH: Try catch um exception abzufangen
@@ -70,7 +70,7 @@ public class Main {
             System.err.println("\nFehler: " + e.getMessage());
         }
 
-        // TODO Kommentar
+        // TO-DO Kommentar
         // SAH: try catch um exception abzufangen
         try {
             // SAH: Gibt Buch zurück
@@ -80,7 +80,7 @@ public class Main {
             System.err.println("\nFehler: " + e.getMessage());
         }
 
-        // TODO Kommentar
+        // TO-DO Kommentar
         // SAH: Ausgabe "Alle Bücher nach ...."
         System.out.println("\nAlle Bücher der Bibliothek nach der Rückgabe:");
         // Calls for String auf alle Bücher
