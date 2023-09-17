@@ -40,9 +40,9 @@ public class Main {
     public static ArrayList<Integer> removeDuplicatesA (int[] a){
 
         ArrayList<Integer> aWithoutDuplicates = Arrays.stream(a)
-                                           .boxed()
-                                           .distinct()
-                                           .collect(Collectors.toCollection(ArrayList::new));
+                                                        .boxed()
+                                                        .distinct()
+                                                        .collect(Collectors.toCollection(ArrayList::new));
 
         return aWithoutDuplicates;
     }

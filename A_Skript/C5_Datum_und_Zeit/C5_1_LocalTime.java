@@ -8,7 +8,7 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class S4_LocalTime {
+public class C5_1_LocalTime {
 
     public static void main(String[] args){
 
