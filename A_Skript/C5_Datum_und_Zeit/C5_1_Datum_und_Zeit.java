@@ -8,7 +8,7 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class C5_1_LocalTime {
+public class C5_1_Datum_und_Zeit {
 
     public static void main(String[] args){
 
@@ -53,7 +53,7 @@ public class C5_1_LocalTime {
 
         LocalDate semesterAnfang = LocalDate.of(23, 05, 13);
 
-        //DateTimeFormatter
+        // S9 - DateTimeFormatter
         DateTimeFormatter meinFormat = DateTimeFormatter.ofPattern("E, d.M.YYYY");
 
         System.out.println(meinFormat.format(semesterAnfang));

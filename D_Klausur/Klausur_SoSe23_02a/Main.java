@@ -30,7 +30,7 @@ public class Main {
 
         scanner.close();
 
-        ArrayList <Integer> aWithoutDuplicates = removeDuplicatesB(aWithDuplicates);
+        ArrayList <Integer> aWithoutDuplicates = removeDuplicatesC(aWithDuplicates);
         System.out.println(aWithoutDuplicates);
 
     }
@@ -61,6 +61,21 @@ public class Main {
 
         return aWithoutDuplicates;
     }
+    
+    // --------------------------------------
+
+    // Das geht nicht. Man muss Arrays.stream(a) machen
+    /* It's worth noting that for arrays of primitive types like int, long, and double,
+    there are specialized stream classes (IntStream, LongStream, and DoubleStream respectively)
+    that are returned by Arrays.stream(). These specialized streams offer additional methods tailored to the primitive types. */
+    public static ArrayList<Integer> removeDuplicatesC (int[] a){
+
+    ArrayList<Integer> aWithoutDuplicates = a.stream()
+                                                    .distinct()
+                                                    .collect(Collectors.toCollection(ArrayList::new));
+
+    return aWithoutDuplicates;
+}
     
     // --------------------------------------
 }
