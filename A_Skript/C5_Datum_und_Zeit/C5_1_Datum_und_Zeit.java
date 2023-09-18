@@ -21,10 +21,8 @@ public class C5_1_Datum_und_Zeit {
         //parse
 
         try{
-
             LocalTime argsTime = LocalTime.parse(args[0]);
             System.out.println(argsTime);
-
         }
 
         catch(ArrayIndexOutOfBoundsException e) {

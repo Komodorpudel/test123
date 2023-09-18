@@ -30,8 +30,9 @@ public class C4_7_Zeichenketten {
         StringBuilder sb = new StringBuilder("Ich bin ein StringBuilder");
         System.out.println(sb);
 
-        // Anfangskapaziät
+        // Kapazität:
         StringBuilder sbLeer = new StringBuilder (5);
+        System.out.println(sbLeer);
 
         //Insert
         System.out.println("\nOffset:");

@@ -14,6 +14,7 @@ public class C4_2_Vererbung {
         System.out.println(oClass.getSimpleName() + "\n");
 
         // Substitutionsprinzip
+        System.out.println("\nSubstitutionsprinzip:");
         Object a = new String("Hello Simon");
 
         Object b = new Object();
@@ -22,18 +23,21 @@ public class C4_2_Vererbung {
         System.out.println(b);
 
         //Polymorphismus
+        System.out.println("\nPolymorphismus:");
         StringBuilder s = new StringBuilder("Mein Name ist Simon");
 
         System.out.println(s.toString());
         System.out.println(b);
 
         // equals
+        System.out.println("\nEquals:");
         System.out.println(a.equals(b));
         Object c = b;
         b = a;
         System.out.println(a.equals(b));
 
         // instanceof
+        System.out.println("\ninstanceof:");
         System.out.println("String?");
         System.out.println("String?:" + c instanceof String);
         //Returns true because c is referencing an String;

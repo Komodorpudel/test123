@@ -2,7 +2,7 @@ package A_Skript.C4_Java_Grundlagen;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+// import java.util.stream.Collectors;
 
 public class C4_6_Arrays {
 
@@ -28,7 +28,7 @@ public class C4_6_Arrays {
         System.out.println(Arrays.toString(zahlenArray));
 
         //equals
-        System.out.println("Equals:");
+        System.out.println("\nEquals:");
         System.out.println(Arrays.equals(zahlenArray, 0, 5, zahlenArrayB, 0, 5));
 
         zahlenArrayB[3] = 3;
@@ -36,7 +36,7 @@ public class C4_6_Arrays {
         System.out.println(Arrays.equals(zahlenArray, 0, 5, zahlenArrayB, 0, 5));
 
         //Fill
-        System.out.println("Fill:");
+        System.out.println("\nFill:");
         Arrays.fill(zahlenArrayB, 8888);
         System.out.println(Arrays.toString(zahlenArrayB));
 
@@ -52,6 +52,8 @@ public class C4_6_Arrays {
 
         //asList
         System.out.println("\nasList von int Array aus:");
+
+        // Eine LIste kann keine primitiven Datentypen aufnehmen, daher müssen wir die ints vorher in Integers verwanden via .boxed
 
         int zahlenArrayD[] = new int [5];
         zahlenArrayD[4] = 5;
