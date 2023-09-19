@@ -1,12 +1,15 @@
-package A_Skript.C5_Datum_und_Zeit;
+package A_Skript.C5_Java_API;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
+// import java.util.function.Function;
+// import java.util.function.Predicate;
+// import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -100,7 +103,6 @@ public class C5_4_Lambda_Ausdrücke {
 
         // +++++++++++
 
-
         // S44 - Supplier (z.B. für Stream.generate()
         System.out.println("\nSupplier:");
 
@@ -122,7 +124,40 @@ public class C5_4_Lambda_Ausdrücke {
 
         // +++++++++++
         
-        // S4
+        // S47 - Methodenreferenz
+
+        // anstatt Supplier normal:
+
+        Supplier <Double> mySupplier2 = () -> Math.random();
+
+        Supplier <Double> mySupplier3 = Math::random;
+
+        // +++++++++++
+
+        // S49 - UnaryOperator
+
+        /*
+        Using UnaryOperator<T> over Function<T, T> has a few advantages:
+
+        Clarity: When someone sees UnaryOperator<T>, they instantly know that the input and output types are the same. With Function<T, T>, one has to look at both type parameters to confirm this. It's a hint about the function's purpose.
+
+        Brevity: It's slightly shorter, which can make code easier to read, especially in cases with more complex generic type definitions.
+
+        Semantics: Using specific interfaces like UnaryOperator<T> can convey intent more clearly than using a more general interface like Function<T, T>. When designing APIs or libraries, choosing a specific interface can provide users with clearer guidance on how something is meant to be used.
+
+        However, it's worth noting that the difference is largely a matter of style and clarity. The actual functionality provided by Function<T, T> and UnaryOperator<T> is identical in the case where the input and output types are the same. Use whichever feels more readable and makes the code's intent clearer in your specific context.
+        */
+
+        UnaryOperator <Integer> myUnaryOperator = s -> s *s;
+
+        // vs.
+
+        Function<Integer, Integer> square = x -> x * x;
+
+        // +++++++++++
+
+
+
 
 }
 
