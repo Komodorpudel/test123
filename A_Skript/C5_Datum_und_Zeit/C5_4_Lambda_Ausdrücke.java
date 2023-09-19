@@ -85,6 +85,22 @@ public class C5_4_Lambda_Ausdrücke {
 
         // +++++++++++
 
+        // S44 - Consumer
+        System.out.println("\nConsumer:");
+        // A Consumer is a functional interface in Java that represents an operation that accepts a single input argument and returns no result. Its primary method is accept(T t).
+        StringBuilder mySB = new StringBuilder("Ich bin ein StringBuilder");
+
+        Consumer <StringBuilder> myConsumer = (StringBuilder s ) -> {s.setLength(5);};
+
+        // System.out.println(myConsumer.accept(mySB)); Achtung, das geht nicht, weil der Consumer ja nichts returned
+
+        myConsumer.accept(mySB);
+
+        System.out.println(mySB);
+
+        // +++++++++++
+
+
         // S44 - Supplier (z.B. für Stream.generate()
         System.out.println("\nSupplier:");
 
@@ -107,10 +123,6 @@ public class C5_4_Lambda_Ausdrücke {
         // +++++++++++
         
         // S4
-
-
-
-
 
 }
 
