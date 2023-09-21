@@ -1,10 +1,10 @@
-package B_Uebung.uebung02_NS;
+package B_Uebung.uebung02_NS.Aufgabe_06;
 
 import java.util.Scanner;
 
 // --------------------------------------
 
-public class Aufgabe_6c {
+public class Aufgabe_06c {
     public static void main(String[] args) {
         int sum = 0;
 

@@ -47,6 +47,9 @@ public class C5_4_Lambda_Ausdrücke {
 
         
         // Predicate<Integer> isEven = n -> n % 2 == 0;
+
+        // <Integer> ist der Input typ
+
         /*
         List<Integer> evenNumbers = numbers.stream()
                                             .filter(isEven)

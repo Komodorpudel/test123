@@ -1,10 +1,10 @@
-package B_Uebung.uebung02_NS;
+package B_Uebung.uebung02_NS.Aufgabe_06;
 
 import java.util.Scanner;
 
 // --------------------------------------
 
-public class Aufgabe_6b {
+public class Aufgabe_06b {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Bitte geben Sie eine ganze Zahl zwischen 0 und 50 (einschließlich) ein:");

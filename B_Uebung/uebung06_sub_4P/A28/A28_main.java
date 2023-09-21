@@ -55,7 +55,12 @@ public class A28_main {
         }
         
         catch (IllegalBankingException e) {
+
+            //
+            input.close();
+            //
             throw new RuntimeException(e);
+            
         }
 
         // SAH: Print out
@@ -70,6 +75,10 @@ public class A28_main {
         catch (IllegalBankingException e) {
             System.out.println("Donald Duck can't withdraw 1000 Euros");
         }
+
+        //
+        input.close();
+        //
 
     }
 

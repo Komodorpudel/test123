@@ -35,7 +35,7 @@ public class C5_5_Streams {
             StringBuilder mySB = new StringBuilder();
 
             for (int j = 0; j < lengthS; j++){
-                char RandomChar = (char) (97 + myRandom.nextInt(26));
+                char RandomChar = (char) (97 + myRandom.nextInt(26)); // Wir casten hier, mehr unten
                 mySB.append(RandomChar);
             }
             myArrayList.add(mySB);
@@ -43,7 +43,6 @@ public class C5_5_Streams {
         }
 
         System.out.println(myArrayList);
-
 
         /*         
         Casting int to char (and vice-versa):
@@ -101,16 +100,67 @@ public class C5_5_Streams {
 
         // Using a stream to print the array
         // Wir haben nur ein einfaches Array, deswegen können wir nicht direkt .stream() machen
-        int max = Arrays.stream(numbers).reduce(0,(a,b) -> (a > b)? a : b); // Reduce acts like a terminal operation
+        int max = Arrays.stream(numbers)
+                        .reduce(0,(a,b) -> (a > b)? a : b); // Reduce acts like a terminal operation
         // Used an Identity, serves as starting point or default result when stream empty
+
         System.out.println(max);
 
         // Alterantiv zu Identity:
         // Optional <T> enthält enweder T oder ist leer
-        OptionalInt max2 = Arrays.stream(numbers).reduce((a,b) -> (a > b)? a : b);
+        OptionalInt max2 = Arrays.stream(numbers)
+                                    .reduce((a,b) -> (a > b)? a : b);
 
         System.out.println(max2);
 
     }
     
 }
+
+    /*
+    In Java, many objects can be sources for streams. Here are some of the most common ones:
+
+    Collections: Most collections in the Java Collections Framework can create streams:
+
+    Collection.stream(): Provides a sequential stream.
+    Collection.parallelStream(): Provides a possibly parallel stream.
+    Example:
+    List<String> myList = Arrays.asList("a", "b", "c");
+    Stream<String> stream = myList.stream();
+
+    Arrays: Arrays can be turned into streams using Arrays.stream() or Stream.of().
+    Example:
+        int[] intArray = {1, 2, 3, 4};
+        IntStream intStream = Arrays.stream(intArray);
+
+    String[] strArray = {"a", "b", "c"};
+    Stream<String> stringStream = Stream.of(strArray);
+
+    Strings: Strings can be turned into an IntStream of characters using the chars() method.
+    Example:
+        String s = "hello";
+        IntStream charStream = s.chars();
+
+    I/O Channels: For example, BufferedReader has a lines() method that returns a stream of lines from the given reader.
+    Example:
+        BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
+        Stream<String> lines = reader.lines();
+
+    Random Numbers: The Random class can produce streams of random numbers.
+    Example:
+        Random random = new Random();
+        IntStream randomInts = random.ints();
+
+    Static Methods in the Stream class: These methods can be used to create streams:
+    Stream.of(): Creates a stream from one or more explicit values.
+    Stream.iterate(): Creates a stream by iteratively applying a function.
+    Stream.generate(): Creates a stream by generating values on the fly.
+    Examples:
+        Stream<String> fromValues = Stream.of("a", "b", "c");
+        Stream<Integer> fromIterate = Stream.iterate(0, n -> n + 1);
+        Stream<Double> fromGenerate = Stream.generate(Math::random);
+
+    Other: There are other sources like BitSet, Pattern, and JarFile which also have methods to produce streams.
+
+    Remember, in addition to these, third-party libraries might provide their own data structures and objects that can be turned into streams, or they might extend existing Java objects with capabilities to produce streams.
+ */
