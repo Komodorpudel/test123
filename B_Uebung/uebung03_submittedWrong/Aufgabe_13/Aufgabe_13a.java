@@ -1,4 +1,4 @@
-package B_Uebung.uebung03_submittedWrong;
+package B_Uebung.uebung03_submittedWrong.Aufgabe_13;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -40,6 +40,8 @@ public class Aufgabe_13a {
                 break;
             }
         }
+
+        // Arrays.mismatch()
 
         // -- Ausgabe
         if (index != -1) {

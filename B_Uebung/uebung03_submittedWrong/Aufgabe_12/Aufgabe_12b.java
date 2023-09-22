@@ -1,4 +1,4 @@
-package B_Uebung.uebung03_submittedWrong;
+package B_Uebung.uebung03_submittedWrong.Aufgabe_12;
 
 public class Aufgabe_12b {
 

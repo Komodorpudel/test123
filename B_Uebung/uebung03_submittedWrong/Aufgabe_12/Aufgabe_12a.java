@@ -1,6 +1,6 @@
-package B_Uebung.uebung03_submittedWrong;
+package B_Uebung.uebung03_submittedWrong.Aufgabe_12;
 
-public class Aufgabe_12a_copy {
+public class Aufgabe_12a {
 
     // --------------------------------------
     
@@ -15,11 +15,12 @@ public class Aufgabe_12a_copy {
         CharSequence str = "matik";
 
         // Für jeden Eintrag des CharSequence-Arrays überprüfen, ob diese eine Teilzeichenkette enthalten, die str entspricht
+        int index = -1;
 
-        for (int i = 0; i < charSequences.length; i++) {
-            int position = charSequences[i].toString().indexOf(str.toString());
-            if (position != -1) {
-                System.out.println("The substring was found in element " + i + " at index: " + position);
+        for (CharSequence a : charSequences) {
+            index = index + 1;
+            if (a.toString().contentEquals(str) == true) {
+                System.out.printf("Die Teilzeichenkette '%s' wurde an der Position %d gefunden.\n", str, index);
             }
         }
     }

@@ -1,4 +1,4 @@
-package B_Uebung.uebung04_sub_4P;
+package B_Uebung.uebung04_sub_4P.Aufgabe_19;
 
 // Necessary packages/classes:
 import java.util.Arrays;
