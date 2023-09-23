@@ -12,7 +12,7 @@ public class Aufgabe_12a_new {
 
         String myString = "matik";
 
-        CharSequence myChar = myString;
+        // CharSequence myChar = myString;
 
         for(int i = 0 ; i < charArray.length; i++){
             int index = charArray[i].toString().indexOf(myString);
