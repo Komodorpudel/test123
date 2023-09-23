@@ -1,4 +1,4 @@
-package B_Uebung.uebung05_sub_4P.A22;
+package B_Uebung.uebung05_sub_4P.Aufgabe_22;
 
 // Necessary packages/classes:
 import java.util.Random;

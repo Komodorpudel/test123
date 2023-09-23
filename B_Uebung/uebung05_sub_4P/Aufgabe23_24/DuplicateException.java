@@ -1,4 +1,4 @@
-package B_Uebung.uebung05_sub_4P.A23_A24;
+package B_Uebung.uebung05_sub_4P.Aufgabe23_24;
 
 // Teilaufgabe c.1. Erstellen Sie eine eigene gepr¨ufte Ausnahme DuplicateException als Unterklasse
 //                  von Exception.
