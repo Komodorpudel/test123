@@ -1,9 +1,9 @@
 package A_Skript.C5_Java_API;
 
-import java.io.IOException;
+/* import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.function.Predicate;
+import java.util.function.Predicate; */
 
 // Error wird das programm abgebrochen
 
@@ -18,17 +18,17 @@ public class C5_6_Ausnahmen {
         // Ausnahmen in Lambda Ausdrücken, hier Predicate
 
         // Predicate <Path> isEmptyPredicate = path -> {
-            try{
+/*             try{
                 return Files.size(path) == 0;
             }
             catch(IOException e) {
                 return false;
             }
-        };
+        }; */
 
         // +++++++++++
 
-    }
+    
 
 /*     public Integer randomNumber(Integer) throws {
 
@@ -54,4 +54,5 @@ public class C5_6_Ausnahmen {
 
 
     
+    }
 }

@@ -13,7 +13,7 @@ public class Aufgabe_18a_neu {
             for (char c : arg.toCharArray()){
 
                 if (myHashMap.containsKey(c)) {
-                    myHashMap.put(c, myHashMap.get(c) + 1); // hier macht er Autoboxing weil con char to Character
+                    myHashMap.put(c, myHashMap.get(c) + 1); // hier macht er Autoboxing von  char to Character
                 }
 
                 else {

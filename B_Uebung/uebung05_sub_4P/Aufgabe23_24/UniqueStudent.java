@@ -7,7 +7,7 @@ import java.util.Map;
 
 // Teilaufgabe c.3. Erstellen Sie eine neue Klasse UniqueStudent, die von der Klasse Student erbt.
 
-public class UniqueStudent extends Student_c {
+public class UniqueStudent extends Student {
 
     // --------------------------------------
 

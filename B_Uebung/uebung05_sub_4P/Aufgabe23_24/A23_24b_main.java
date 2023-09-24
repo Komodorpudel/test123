@@ -14,7 +14,7 @@ public class A23_24b_main {
     public static void main(String[] args) {
 
             // 1. ein Student-Objekt erstellt und ausgibt,
-            Student_a student = new Student_a("John Doe", 1234567);
+            Student student = new Student("John Doe", 1234567);
             System.out.println(student);
 
             //
@@ -31,7 +31,7 @@ public class A23_24b_main {
             input.useDelimiter(Pattern.compile("[\\r\\n]+"));
 
             // 4. eine Liste f¨ur Student-Objekte erstellt,
-            ArrayList<Student_a> studentList = new ArrayList<>();
+            ArrayList<Student> studentList = new ArrayList<>();
 
             // 5. das zuvor erstellte Student-Objekt dieser Liste hinzuf¨ugt,
             studentList.add(student);
@@ -51,7 +51,7 @@ public class A23_24b_main {
                     int matrikelNummer = input.nextInt();
 
                     // Neuen Studenten anlegen und zu studentList hinzugügen
-                    Student_a newStudent = new Student_a(name, matrikelNummer);
+                    Student newStudent = new Student(name, matrikelNummer);
                     studentList.add(newStudent);
                 }
                 
@@ -65,7 +65,7 @@ public class A23_24b_main {
             }
 
             // 7. alle in der Liste enthaltenen Studierenden in jeweils einer eigenen Zeile ausgibt.
-            for (Student_a s : studentList) {
+            for (Student s : studentList) {
                 System.out.println(s);
             }
 
