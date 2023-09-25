@@ -1,4 +1,4 @@
-package B_Uebung.uebung06_sub_4P.A26_A27;
+package B_Uebung.uebung06_sub_4P.A26_A27_neu;
 
 import java.time.LocalDate;
 
