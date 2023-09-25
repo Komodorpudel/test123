@@ -21,7 +21,6 @@ public class A23_24d_main_neu {
 
                 new UniqueStudent_neu(name, matrikelnummer);
 
-
             }
 
         }   
