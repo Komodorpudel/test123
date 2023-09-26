@@ -18,7 +18,6 @@ public class DontMinimizeMe_neu extends JFrame {
 
         addWindowListener(new WindowAdapter() { // anonyme Klasse hier
 
-
             public void windowIconified(WindowEvent e){
                 add(new JButton("ouch"));
             }
