@@ -10,12 +10,12 @@ package B_Uebung.uebung07_sub_4P.A34;
 
 // Necessary packages/classes:
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+// import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import java.awt.Graphics;
 import java.awt.Point;
-import java.awt.Dimension;
-import java.awt.event.MouseMotionListener;
+// import java.awt.Dimension;
+// import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
@@ -66,7 +66,7 @@ public class MouseHighlighter extends JFrame {
     // paint
     @Override
     public void paint(Graphics g) {
-        super.paint(g);
+        super.paint(g); // entfernt das vorher gezeichnete
         g.drawOval(mousePoint.x - 15, mousePoint.y - 15, 30, 30);
     }
 
