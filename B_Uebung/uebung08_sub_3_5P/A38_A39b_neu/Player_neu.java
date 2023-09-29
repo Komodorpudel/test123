@@ -9,18 +9,25 @@ public class Player_neu {
 
     public Player_neu (String name, Team_neu team){
 
-
+        this.name = name;
+        linkTeam(team);
 
     }
 
 
     public void linkTeam (Team_neu team){
 
-    }
+            this.team = team;
 
+            if (!team.getlinkPlayers().contains(this)){
+
+                team.linkPlayer(this);
+
+            }
+
+        }
 
     public Team_neu getlinkTeam (){
-
 
         return this.team;
         
@@ -28,6 +35,12 @@ public class Player_neu {
 
     public void unlinkTeam (Team_neu team){
 
+        this.team = null;
+
+        if (team.getlinkPlayers().contains(this)){
+
+            team.unlinkPlayer(this);
+        }
 
     }
     

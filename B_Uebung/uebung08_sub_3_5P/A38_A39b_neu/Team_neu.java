@@ -30,28 +30,29 @@ public class Team_neu {
     
     public void linkPlayer(Player_neu player) {
 
-
-        // Falls schon link vorhanden
-        if (player.getlinkTeam() != null) {
-
-        }
-
         players.add(player);
-        player.linkTeam(this);
+
+        if (player.getlinkTeam() != this ){
+        
+            player.linkTeam(this);
 
         }
-
 
     }
 
     public void unlinkPlayer(Player_neu player){
+
+        this.players.remove(player);
+
+        if (player.getlinkTeam() == this)
+        player.unlinkTeam(this);
 
 
     }
 
     public HashSet<Player_neu> getlinkPlayers(){
 
-        return ;
+        return players;
     }
 
     @Override
