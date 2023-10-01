@@ -31,7 +31,7 @@ public class ListBankAccounts_ME extends JDialog implements ActionListener, Prop
 
         JLabel lblAllBankAccounts = new JLabel("All bank accounts: ");
         add(lblAllBankAccounts, BorderLayout.NORTH);
-        
+
         bankAccountList = new JList<>();
         add(bankAccountList, BorderLayout.CENTER);
 
@@ -52,6 +52,9 @@ public class ListBankAccounts_ME extends JDialog implements ActionListener, Prop
 
         setLocation(parent.getLocation().x + 200, parent.getLocation().y + 200);
 
+        // ++++++++++++++++++++
+
+        // Instance holen
         bankAccountContainer = BankAccountContainer_ME.instance();
         bankAccountContainer.addPropertyChangeListener(this);
 
@@ -59,6 +62,9 @@ public class ListBankAccounts_ME extends JDialog implements ActionListener, Prop
             b.addPropertyChangeListener(this);
         }
 
+        // ++++++++++++++++++++ 
+
+        // Finally
         updateList();
         pack();
         setVisible(true);
@@ -94,13 +100,20 @@ public class ListBankAccounts_ME extends JDialog implements ActionListener, Prop
         pack();
     }
 
+    // ++++++++++++++++++++++++++++++++
+
     @Override
     public void actionPerformed(ActionEvent e) {
+        
         if (e.getActionCommand().equals("Delete bank account")) {
             onDelete();
-        } else if (e.getActionCommand().equals("Cancel")) {
+        }
+        
+        else if (e.getActionCommand().equals("Cancel")) {
             onCancel();
-        } else if (e.getActionCommand().equals("Edit bank account")) {
+        }
+        
+        else if (e.getActionCommand().equals("Edit bank account")) {
             onEdit();
         }
     }
@@ -133,6 +146,7 @@ public class ListBankAccounts_ME extends JDialog implements ActionListener, Prop
 
     }
 
+    // onCancel
     private void onCancel() {
         dispose();
     }
