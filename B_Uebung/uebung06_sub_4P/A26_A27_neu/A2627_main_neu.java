@@ -25,7 +25,7 @@ public class A2627_main_neu {
         // SAH: Try to create account
         try {
             BankAccount_neu ba2 = new BankAccount_neu("FalscheR Test1 naMe", "5R9S3B2N0Q7");
-            System.out.println("Ueberpruefung des Namen fehlgeschlagen!");
+            System.out.println("Ueberpruefung des Namen fehlgeschlagen!" + ba2);
         }
         
         catch (IllegalArgumentException e) {
@@ -35,7 +35,7 @@ public class A2627_main_neu {
         // SAH: Try to create account
         try {
             BankAccount_neu ba2 = new BankAccount_neu("Gueltiger Name", "5R9S3a2N0Q7");
-            System.out.println("Ueberpruefung der Kontonummer fehlgeschlagen!");
+            System.out.println("Ueberpruefung der Kontonummer fehlgeschlagen!" + ba2);
         }
         
         catch (IllegalArgumentException e) {

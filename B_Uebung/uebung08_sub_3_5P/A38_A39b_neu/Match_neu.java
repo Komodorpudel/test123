@@ -7,14 +7,14 @@ public class Match_neu {
 
     public Match_neu(Team_neu team1, Team_neu team2, Team_neu winner) {
 
-        if (team1.equals(teams)){
+        if (team1.equals(team2)){
 
-            throw new IllegalAccessException("Teams müssen unterschiedlich sein");
+            throw new IllegalArgumentException("Teams müssen unterschiedlich sein");
 
         }
 
         else if (!winner.equals(team1) && !winner.equals(team2)){
-            throw new IllegalArgumentException("Es muss einen Sieger geben";
+            throw new IllegalArgumentException("Es muss einen Sieger geben");
         }
 
     }

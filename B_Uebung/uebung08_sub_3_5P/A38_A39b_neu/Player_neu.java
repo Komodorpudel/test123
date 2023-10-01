@@ -5,8 +5,6 @@ public class Player_neu {
     private String name;
     private Team_neu team;
 
-
-
     public Player_neu (String name, Team_neu team){
 
         this.name = name;
@@ -17,15 +15,20 @@ public class Player_neu {
 
     public void linkTeam (Team_neu team){
 
-            this.team = team;
+        if (this.team != null) {
+            this.team.unlinkPlayer(this);
+        }
+        
+        this.team = team;
 
-            if (!team.getlinkPlayers().contains(this)){
 
-                team.linkPlayer(this);
+        if (!team.getlinkPlayers().contains(this)){
 
-            }
+            team.linkPlayer(this);
 
         }
+
+    }
 
     public Team_neu getlinkTeam (){
 
@@ -42,6 +45,11 @@ public class Player_neu {
             team.unlinkPlayer(this);
         }
 
+    }
+
+    @Override
+    public String toString(){
+        return "(" + name + ": " + team + ")";
     }
     
 }

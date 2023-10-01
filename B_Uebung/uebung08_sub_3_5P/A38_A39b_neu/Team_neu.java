@@ -8,7 +8,7 @@ public class Team_neu {
     private String name;
     private HashSet <Player_neu> players = new HashSet<>();
 
-    private static HashMap <String, Team_neu> teams = new HashMap<>();
+    public static HashMap <String, Team_neu> teams = new HashMap<>();
 
     public Team_neu (String name, HashSet<Player_neu> players) {
 
@@ -47,7 +47,6 @@ public class Team_neu {
         if (player.getlinkTeam() == this)
         player.unlinkTeam(this);
 
-
     }
 
     public HashSet<Player_neu> getlinkPlayers(){
@@ -56,7 +55,6 @@ public class Team_neu {
     }
 
     @Override
-
     public boolean equals (Object o) {
 
         if (o == null){
@@ -72,6 +70,11 @@ public class Team_neu {
         return temp.name.equals(this.name);
 
 
+    }
+
+    @Override
+    public String toString(){
+        return name;
     }
     
 }

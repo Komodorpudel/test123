@@ -17,6 +17,8 @@ class Player {
     public Player(String name, Team team) {
         this.name = name;
         setTeam(team);
+
+        System.out.println(this.name);
     }
 
     // --------------------------------------
