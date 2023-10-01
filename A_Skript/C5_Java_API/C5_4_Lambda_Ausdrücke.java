@@ -151,7 +151,7 @@ public class C5_4_Lambda_Ausdrücke {
         However, it's worth noting that the difference is largely a matter of style and clarity. The actual functionality provided by Function<T, T> and UnaryOperator<T> is identical in the case where the input and output types are the same. Use whichever feels more readable and makes the code's intent clearer in your specific context.
         */
 
-        UnaryOperator <Integer> myUnaryOperator = s -> s *s;
+        UnaryOperator <Integer> myUnaryOperator = s -> s * s;
 
         // vs.
 

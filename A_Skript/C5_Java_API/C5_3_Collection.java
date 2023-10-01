@@ -3,6 +3,8 @@ package A_Skript.C5_Java_API;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
+import java.util.Iterator;
+
 public class C5_3_Collection {
 
     public static void main (String[] args){
@@ -21,6 +23,14 @@ public class C5_3_Collection {
         for (String s : myList){
             System.out.println(s);
         }
+
+        System.out.println("Über iterator:");
+
+        Iterator <String> myIterator = myList.iterator();
+
+        while(myIterator.hasNext()){
+            System.out.println(myIterator.next());
+        };
 
         //S34 - TreeSet mit forEach Methode
         TreeSet<Integer> myTreeSet = new TreeSet<Integer>();
