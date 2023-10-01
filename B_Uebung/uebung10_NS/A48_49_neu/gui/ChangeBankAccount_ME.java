@@ -1,6 +1,6 @@
 package B_Uebung.uebung10_NS.A48_49_neu.gui;
 import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccount;
-import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccountContainer;
+import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccountContainer_ME;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -16,26 +16,30 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 @SuppressWarnings("serial")
-public class ChangeBankAccount extends JDialog implements ActionListener, PropertyChangeListener {
+public class ChangeBankAccount_ME extends JDialog implements ActionListener, PropertyChangeListener {
 
 
 	// Attribute
     private BankAccount subject;
-    private BankAccountContainer container;
+    private BankAccountContainer_ME container;
 
     private JTextField holderTextfield;
     private JTextField balanceTextField;
 	private JTextField accountNumberTextfield;
 
 	// Konstruktor
-    public ChangeBankAccount(ListBankAccounts parent, BankAccount subject) {
+    public ChangeBankAccount_ME(ListBankAccounts_ME parent, BankAccount subject) {
+
 		super(parent, "Change Employee" + subject.getAccountNumber(), false);
 		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-		container = BankAccountContainer.instance();
+
+		container = BankAccountContainer_ME.instance();
 		container.addPropertyChangeListener(this);
+
 		for (BankAccount b : container) {
 			b.addPropertyChangeListener(this);
 		}
+		
 		this.subject = subject;
 
 		this.setLayout(new GridLayout(0, 1));
@@ -63,13 +67,13 @@ public class ChangeBankAccount extends JDialog implements ActionListener, Proper
 		p.add(balanceLabel);
 		p.add(balanceTextField);
 
-
 		JPanel t = new JPanel();
 		oben.add(t, BorderLayout.CENTER);
 
 		JButton ok = new JButton("OK");
 		ok.addActionListener(this);
 		t.add(ok);
+
 		JButton cancel = new JButton("Cancel");
 		cancel.addActionListener(this);
 		t.add(cancel);
@@ -97,9 +101,18 @@ public class ChangeBankAccount extends JDialog implements ActionListener, Proper
 
     }
 
-	// save
+	// To-do: Save
     private void save() {
-		/* TODO: Implementierung */
+
+		try{
+			this.subject.addBalance(Double.parseDouble(balanceTextField.getText()));
+			dispose();
+		}
+
+		catch (IllegalArgumentException e) {
+			load();
+			JOptionPane.showMessageDialog(null, "Please input a valid account holder name and a valid balance to add." + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+		}
     }
 
 	// actionPerformed

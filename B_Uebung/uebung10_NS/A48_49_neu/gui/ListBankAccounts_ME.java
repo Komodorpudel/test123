@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccount;
-import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccountContainer;
+import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccountContainer_ME;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -17,15 +17,15 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.Vector;
 
-public class ListBankAccounts extends JDialog implements ActionListener, PropertyChangeListener {
+public class ListBankAccounts_ME extends JDialog implements ActionListener, PropertyChangeListener {
 
     // Attribute
-    private BankAccountContainer bankAccountContainer;
+    private BankAccountContainer_ME bankAccountContainer;
     private JList<BankAccount> bankAccountList;
 
 
     // Konstruktor
-    public ListBankAccounts(BankGUI parent) {
+    public ListBankAccounts_ME(BankGUI parent) {
         super(parent, "Show all bank accounts", false);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 
@@ -48,7 +48,7 @@ public class ListBankAccounts extends JDialog implements ActionListener, Propert
 
         setLocation(parent.getLocation().x + 200, parent.getLocation().y + 200);
 
-        bankAccountContainer = BankAccountContainer.instance();
+        bankAccountContainer = BankAccountContainer_ME.instance();
         bankAccountContainer.addPropertyChangeListener(this);
         for (BankAccount b : bankAccountContainer) {
             b.addPropertyChangeListener(this);
@@ -59,7 +59,7 @@ public class ListBankAccounts extends JDialog implements ActionListener, Propert
 
     }
 
-    //to-do
+    //to-do: propertyChange
     public void propertyChange(PropertyChangeEvent e) {
         updateList();
 
@@ -73,6 +73,7 @@ public class ListBankAccounts extends JDialog implements ActionListener, Propert
 
             // Falls vorhandener Wert entfernt wird:
             else {
+                temp = (BankAccount) e.getOldValue();
                 temp.removePropertyChangeListener(this);
             }
         }
@@ -98,12 +99,32 @@ public class ListBankAccounts extends JDialog implements ActionListener, Propert
         }
     }
 
+    // To-do: onDelete
     private void onDelete() {
-        /* TODO: Implementierung */
+        BankAccount subject = bankAccountList.getSelectedValue();
+
+        if (subject != null){
+            subject.removePropertyChangeListener(this);
+            bankAccountContainer.unlinkBankAccount(subject);
+        }
+
+        else {
+            JOptionPane.showMessageDialog(null, "No bank account selected", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
+    // To-do: onEdit
     private void onEdit() {
-        /* TODO: Implementierung */
+        BankAccount subject = bankAccountList.getSelectedValue();
+
+        if (subject != null) {
+            new ChangeBankAccount_ME(this, subject);
+        }
+
+        else{
+            JOptionPane.showMessageDialog(null, "No bank account slected", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
     }
 
     private void onCancel() {

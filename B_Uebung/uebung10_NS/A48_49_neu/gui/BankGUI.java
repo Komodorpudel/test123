@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccount;
-import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccountContainer;
+import B_Uebung.uebung10_NS.A48_49_neu.data.BankAccountContainer_ME;
 import B_Uebung.uebung10_NS.A48_49_neu.data.IllegalBankingException;
 
 import java.awt.BorderLayout;
@@ -17,7 +17,7 @@ import java.awt.event.ActionListener;
 public class BankGUI extends JFrame implements ActionListener {
 
     // Attribute
-    private BankAccountContainer bankAccountContainer = BankAccountContainer.instance();
+    private BankAccountContainer_ME bankAccountContainer = BankAccountContainer_ME.instance();
 
 
     // Konstruktor
@@ -60,7 +60,7 @@ public class BankGUI extends JFrame implements ActionListener {
 
     // onList
     private void onList() {
-        new ListBankAccounts(this);
+        new ListBankAccounts_ME(this);
     }
 
     // onBalancebyHolder
@@ -76,17 +76,15 @@ public class BankGUI extends JFrame implements ActionListener {
         JOptionPane.showMessageDialog(this, name + " holds " + sum + "euros in total");
     }
 
-
     // onClose
     private void onClose() {
         dispose();
         System.exit(0);
     }
 
-
     // main zum testen
     public static void main(String[] args) {
-        BankAccountContainer container = BankAccountContainer.instance();
+        BankAccountContainer_ME container = BankAccountContainer_ME.instance();
         try {
             BankAccount temp = new BankAccount("Dagobert Duck", "ENTENHAUSEN1");
             temp.addBalance(23561.65);

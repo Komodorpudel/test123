@@ -5,30 +5,35 @@ import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class BankAccountContainer implements Iterable<BankAccount> {
+public class BankAccountContainer_ME implements Iterable<BankAccount> {
 
+
+    // Attribute
     private ArrayList<BankAccount> bankAccounts;
-    private static BankAccountContainer unique;
+    private static BankAccountContainer_ME unique; // Reference zu dem einen existierenden BankAccountContainer_ME
+    
     private PropertyChangeSupport changes = new PropertyChangeSupport(this);
 
     // Konstruktor
-    private BankAccountContainer() {
+    private BankAccountContainer_ME() {
         this.bankAccounts = new ArrayList<>();
     }
 
     // Iteratormuster: Klasse implementiert iteratbel und gibt iterator zurück via Iterator Methode
     @Override
     public Iterator <BankAccount> iterator() {
+
+        // Returned einen iterator für bankAccounts, so dass man durch alle bankAccounts durch gehen kann
         return bankAccounts.iterator();
 
     }
 
     // Singelton Muster: instance() erstellt Container falls notwendig und returned reference 
     // ist public damit jeder zugreifen kann
-    public static BankAccountContainer instance(){
+    public static BankAccountContainer_ME instance(){
 
         if (unique == null){
-            unique = new BankAccountContainer();
+            unique = new BankAccountContainer_ME();
         }
 
         return unique;
@@ -36,14 +41,12 @@ public class BankAccountContainer implements Iterable<BankAccount> {
 
     // Link
     public void linkBankAccount (BankAccount b) throws IllegalBankingException {
-
         if(bankAccounts.contains(b)){
             throw new IllegalBankingException("Bank account already exists with account number " + b.getAccountNumber());
         }
 
         bankAccounts.add(b);
         changes.firePropertyChange("BankAccount", null, b);
-
     }
 
     // Unlink
