@@ -35,8 +35,12 @@ public class BankAccount {
         if (checkAccountHolderName(accountHolderName)) {
             String oldName = this.accountHolderName;
             this.accountHolderName = accountHolderName;
+
             changes.firePropertyChange("account holder name", oldName, this.accountHolderName);
-        } else {
+
+        }
+        
+        else {
             throw new IllegalArgumentException("Wrong name format");
         }
     }

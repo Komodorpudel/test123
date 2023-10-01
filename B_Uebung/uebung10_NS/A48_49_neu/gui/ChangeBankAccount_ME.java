@@ -39,7 +39,7 @@ public class ChangeBankAccount_ME extends JDialog implements ActionListener, Pro
 		for (BankAccount b : container) {
 			b.addPropertyChangeListener(this);
 		}
-		
+
 		this.subject = subject;
 
 		this.setLayout(new GridLayout(0, 1));
@@ -50,6 +50,7 @@ public class ChangeBankAccount_ME extends JDialog implements ActionListener, Pro
 
 		JPanel p = new JPanel();
 		oben.add(p, BorderLayout.NORTH);
+		
 		JLabel accountNumberLabel = new JLabel("Account number: ");
 		accountNumberTextfield = new JTextField(12);
 		accountNumberTextfield.setEnabled(false);

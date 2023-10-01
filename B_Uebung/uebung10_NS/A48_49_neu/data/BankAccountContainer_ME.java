@@ -11,7 +11,7 @@ public class BankAccountContainer_ME implements Iterable<BankAccount> {
     // Attribute
     private ArrayList<BankAccount> bankAccounts;
     private static BankAccountContainer_ME unique; // Reference zu dem einen existierenden BankAccountContainer_ME
-    
+
     private PropertyChangeSupport changes = new PropertyChangeSupport(this);
 
     // Konstruktor
@@ -41,16 +41,19 @@ public class BankAccountContainer_ME implements Iterable<BankAccount> {
 
     // Link
     public void linkBankAccount (BankAccount b) throws IllegalBankingException {
+
         if(bankAccounts.contains(b)){
             throw new IllegalBankingException("Bank account already exists with account number " + b.getAccountNumber());
         }
 
         bankAccounts.add(b);
+
         changes.firePropertyChange("BankAccount", null, b);
     }
 
     // Unlink
     public void unlinkBankAccount(BankAccount b) {
+        
         if (!this.bankAccounts.contains(b)){
 
             return;

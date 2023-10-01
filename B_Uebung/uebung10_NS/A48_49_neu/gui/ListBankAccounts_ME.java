@@ -23,25 +23,29 @@ public class ListBankAccounts_ME extends JDialog implements ActionListener, Prop
     private BankAccountContainer_ME bankAccountContainer;
     private JList<BankAccount> bankAccountList;
 
-
     // Konstruktor
     public ListBankAccounts_ME(BankGUI parent) {
+
         super(parent, "Show all bank accounts", false);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 
         JLabel lblAllBankAccounts = new JLabel("All bank accounts: ");
         add(lblAllBankAccounts, BorderLayout.NORTH);
+        
         bankAccountList = new JList<>();
         add(bankAccountList, BorderLayout.CENTER);
 
         JPanel buttons = new JPanel();
         add(buttons, BorderLayout.SOUTH);
+
         JButton cancel = new JButton("Cancel");
         cancel.addActionListener(this);
         buttons.add(cancel);
+
         JButton delete = new JButton("Delete bank account");
         delete.addActionListener(this);
         buttons.add(delete);
+
         JButton edit = new JButton("Edit bank account");
         edit.addActionListener(this);
         buttons.add(edit);
@@ -50,9 +54,11 @@ public class ListBankAccounts_ME extends JDialog implements ActionListener, Prop
 
         bankAccountContainer = BankAccountContainer_ME.instance();
         bankAccountContainer.addPropertyChangeListener(this);
+
         for (BankAccount b : bankAccountContainer) {
             b.addPropertyChangeListener(this);
         }
+
         updateList();
         pack();
         setVisible(true);

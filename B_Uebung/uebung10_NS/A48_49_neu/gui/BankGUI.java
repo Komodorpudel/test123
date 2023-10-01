@@ -41,18 +41,23 @@ public class BankGUI extends JFrame implements ActionListener {
 
         this.add(panelSouth, BorderLayout.SOUTH);
 
-        setSize(600, 200);
+        setSize(900, 200);
         setVisible(true);
     }
 
     // actionPerformed
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if (e.getActionCommand().equals("Show all bank accounts")) {
             onList();
-        } else if (e.getActionCommand().equals("Calculate total balance for a holder")) {
+        }
+        
+        else if (e.getActionCommand().equals("Calculate total balance for a holder")) {
             onBalanceByHolder();
-        } else if (e.getActionCommand().equals("Close application")) {
+        }
+        
+        else if (e.getActionCommand().equals("Close application")) {
             onClose();
         }
     }
@@ -84,27 +89,38 @@ public class BankGUI extends JFrame implements ActionListener {
 
     // main zum testen
     public static void main(String[] args) {
+
+        // Container holen
         BankAccountContainer_ME container = BankAccountContainer_ME.instance();
+        
         try {
             BankAccount temp = new BankAccount("Dagobert Duck", "ENTENHAUSEN1");
             temp.addBalance(23561.65);
             container.linkBankAccount(temp);
+
             temp = new BankAccount("Dagobert Duck", "ENTENHAUSEN2");
             temp.addBalance(336.09);
             container.linkBankAccount(temp);
+
             temp = new BankAccount("Dagobert Duck", "ENTENHAUSEN3");
             temp.addBalance(123226.09);
             container.linkBankAccount(temp);
+
             temp = new BankAccount("Donald Duck", "ENTENHAUSEN4");
             temp.addBalance(- 3461.65);
             container.linkBankAccount(temp);
+
             temp = new BankAccount("Donald Duck", "PHANTOMIAS12");
             temp.addBalance(44239.50);
             container.linkBankAccount(temp);
+
             temp = new BankAccount("Klaas Klever", "ENTENHAUSEN5");
             temp.addBalance(546753.12);
             container.linkBankAccount(temp);
-        } catch (IllegalBankingException e) {
+
+        }
+        
+        catch (IllegalBankingException e) {
             throw new RuntimeException(e);
         }
         new BankGUI();
