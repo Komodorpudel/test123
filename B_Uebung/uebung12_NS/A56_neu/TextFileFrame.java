@@ -1,4 +1,4 @@
-package B_Uebung.uebung12_NS.src;
+package B_Uebung.uebung12_NS.A56_neu;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

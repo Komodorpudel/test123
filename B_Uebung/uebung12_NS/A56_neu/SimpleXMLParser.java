@@ -1,6 +1,7 @@
-package B_Uebung.uebung12_NS.src;
+package B_Uebung.uebung12_NS.A56_neu;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
@@ -15,6 +16,9 @@ public class SimpleXMLParser {
     // ------------------
 
     public static void main(String[] args) {
+
+        //
+        
 
         // Loppt durch die dateinahmen durch
         for (String filename : new String[]{"invalidTeilnehmer1.xml", "invalidTeilnehmer2.xml", "invalidTeilnehmer3.xml"}) {
@@ -64,12 +68,11 @@ public class SimpleXMLParser {
             }
 
             // Reihe nach durchlesen
-
             boolean validEnding = false;
 
             while ((line = myReader.readLine()) != null) {
                 
-                line.strip();
+                line = line.strip();
 
                 if (line.equals(dateiEnde)){
                     validEnding = true;
@@ -82,11 +85,22 @@ public class SimpleXMLParser {
                     
                     matrikelnummern.add(Integer.valueOf(line.substring(2+7, lastIndex)));
                 }
+                else {
+                    throw new WrongFormatException(filename);
+                }
             }
+
+            if (!validEnding){
+                throw new WrongFormatException(filename);
+            }
+
+            matrikelnummern.forEach(System.out::println);
 
         }
 
-        catch () {
+        catch (IOException e) {
+
+            e.printStackTrace();
 
         }
     }
