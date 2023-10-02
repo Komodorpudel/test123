@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>130</y>
+      <w>450</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Laptop
+--
+-id: Integer {unique, readonly}
+-operatingSystem: OperatingSystem
+-ram: UnlimitedNatural
+-installedPrograms: String[0..*]
+--
++Laptop(id: Integer, operatingSystem: OperatingSystem, ram: Integer,
+    installedPrograms: String[0..*]) {IllegalLaptopException}
++getId(): Integer
++getOperatingSystem(): OperatingSystem
++getRam(): UnlimitedNatural
++getInstalledPrograms(): String[0..*]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>430</y>
+      <w>270</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>IllegalLaptopException
+--
++IllegalLaptopException(message: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>340</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>java.lang.Exception</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>360</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>380</y>
+      <w>130</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+OperatingSystem
+--
+WINDOWS
+LINUX
+MACOS</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

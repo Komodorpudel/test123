@@ -1,4 +1,4 @@
-package B_Uebung.uebung11_NS.A53;
+package B_Uebung.uebung11_NS.A53_a_b_c_neu;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ public class Aufgabe_53_neu {
 
     public static void main(String [] args) {
 
-        // Ersetzen Sie diese Werte mit den richtigen Daten Ihrer MySQL-Datenbank
+        // Verbindungs-daten
         String url = "jdbc:mysql://educos-srv01.informatik.uni-augsburg.de:3306/theDatabase?useSSL=false&\serverTimezone=Europe/Berlin";
         String username = "student";
         String password = "inFormatik2"; 
@@ -36,7 +36,6 @@ public class Aufgabe_53_neu {
 
     public static double getChoresDone (Connection connection, String flatmate) throws SQLException {
 
-
         // Query vorbereiten - String
         String sqlQuery = "SELECT Chore.timeRequiredHours " +
                           "FROM Chore, FlatmateChore " +
@@ -44,7 +43,7 @@ public class Aufgabe_53_neu {
                           "AND FlatmateChore.name = ?";
 
 
-        // Query vorbereiten und verindung estabilishen
+        // Query vorbereiten und verbindung estabilishen
         try(PreparedStatement myStatement = connection.prepareStatement(sqlQuery)) {
 
             // Flatmate einsetzen
@@ -53,7 +52,7 @@ public class Aufgabe_53_neu {
             // Executen und Ergebnis bekommen
             ResultSet myResultSet = myStatement.executeQuery();
 
-            // SUmme berechnen
+            // Summe berechnen
             float sum = 0;
 
             while (myResultSet.next()){
@@ -77,7 +76,6 @@ public class Aufgabe_53_neu {
 
     public static void choresDoneBeforeBirthday (Connection connection, String flatmate, int year) {
 
-
         // Query vorbereiten
 
         String sqlQuery = "SELECT * " +
@@ -96,8 +94,7 @@ public class Aufgabe_53_neu {
                 // Sobald ich in der ersten Zeile bin, kann ich bday abfragen
                 // Ich setze den Bday auf das Jahr, welches übergeben wurde
                 // LocalDate birthday = myResultSet.getDate("birthday").toLocalDate().withYear(year);
-                LocalDate birthday = LocalDate.parse (myResultSet.getString("birthday")).withYear(year);
-
+                LocalDate birthday = LocalDate.parse(myResultSet.getString("birthday")).withYear(year);
 
                 // DoneAt als LocalDate
                 LocalDate doneAt = LocalDate.parse(myResultSet.getString("doneAt"));
