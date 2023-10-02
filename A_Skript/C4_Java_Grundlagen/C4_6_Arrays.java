@@ -49,7 +49,6 @@ public class C4_6_Arrays {
         List<Integer> zahlenListe = Arrays.asList(zahlenArrayC);
         System.out.println(zahlenListe);
 
-
         //asList
         System.out.println("\nasList von int Array aus:");
 
