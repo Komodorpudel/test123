@@ -1,4 +1,4 @@
-package B_Uebung.uebung07_sub_4P.A34;
+package B_Uebung.uebung07_sub_4P.A34_neu;
 
 import java.awt.BorderLayout;
 import javax.swing.JFrame;

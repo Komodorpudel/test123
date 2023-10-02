@@ -2,7 +2,9 @@ package B_Uebung.uebung12_NS.A56_neu;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -15,10 +17,12 @@ public class SimpleXMLParser {
 
     // ------------------
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, URISyntaxException {
 
-        //
-        
+        // Test directory
+        System.out.println("Directory:");
+        System.out.println(new java.io.File(".").getCanonicalPath());
+
 
         // Loppt durch die dateinahmen durch
         for (String filename : new String[]{"invalidTeilnehmer1.xml", "invalidTeilnehmer2.xml", "invalidTeilnehmer3.xml"}) {
@@ -44,7 +48,7 @@ public class SimpleXMLParser {
 
     // ------------------
 
-    public static void parseTeilnehmerFile(String filename) throws WrongFormatException {
+    public static void parseTeilnehmerFile(String filename) throws WrongFormatException, URISyntaxException {
         ArrayList<Integer> matrikelnummern = new ArrayList<>();
         /* TO-DO
         *   - Datei filename oeffnen
@@ -58,7 +62,19 @@ public class SimpleXMLParser {
         *   - Wenn eine IOException auftritt, deren Trace ausgeben */
 
 
-        try (BufferedReader myReader = Files.newBufferedReader(Paths.get(filename))) {
+        Path path = null;
+        java.net.URL url = SimpleXMLParser.class.getResource(filename);
+        if (url != null) {
+            path = Paths.get(url.toURI());
+            // Now use path with Files.newBufferedReader or other file operations
+        }
+        
+        else {
+            // Handle error, file not found
+        }
+
+
+        try (BufferedReader myReader = Files.newBufferedReader(path)) {
 
             // Erste Zeile einlesen ob testen, ob wirklich dateiAnfang
             String line = myReader.readLine();

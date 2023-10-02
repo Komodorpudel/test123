@@ -1,4 +1,4 @@
-package B_Uebung.uebung07_sub_4P.A34;
+package B_Uebung.uebung07_sub_4P.A34_neu;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -63,6 +63,7 @@ public class LinePanel_neu extends JPanel {
             g.drawLine(previousPoint.x, previousPoint.y, previewPoint.x, previewPoint.y);
 
         }
+        
     }
     
 }

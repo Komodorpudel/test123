@@ -1,4 +1,4 @@
-package B_Uebung.uebung07_sub_4P.A31_32_neu;
+package B_Uebung.uebung07_sub_4P.A31_A32_neu;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;

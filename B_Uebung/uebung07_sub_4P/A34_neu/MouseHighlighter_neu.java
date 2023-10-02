@@ -1,4 +1,4 @@
-package B_Uebung.uebung07_sub_4P.A34;
+package B_Uebung.uebung07_sub_4P.A34_neu;
 
 import java.awt.Graphics;
 // import java.awt.Point;
@@ -13,7 +13,6 @@ public class MouseHighlighter_neu extends JFrame {
     private int y;
 
     // private Point();
-
 
     public MouseHighlighter_neu(){
 
