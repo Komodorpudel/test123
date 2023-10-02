@@ -5,22 +5,42 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.sql.DriverManager;
 
 public class Aufgabe_53_neu {
 
     public static void main(String [] args) {
 
-        
+        // Ersetzen Sie diese Werte mit den richtigen Daten Ihrer MySQL-Datenbank
+        String url = "jdbc:mysql://educos-srv01.informatik.uni-augsburg.de:3306/theDatabase?useSSL=false&\serverTimezone=Europe/Berlin";
+        String username = "student";
+        String password = "inFormatik2"; 
+
+        try(Connection myConnection = DriverManager.getConnection(url, username, password)) {
+
+            System.out.println("Andreas" + getChoresDone (myConnection, "Andreas") + " Hours");
+
+            System.out.println("Tobias chores Done:");
+            choresDoneBeforeBirthday (myConnection, "Tobias", 2022);
+
+        }
+
+        catch (SQLException e) {
+
+            e.printStackTrace();
+        }
 
     }
+
+    // -----------------
 
     public static double getChoresDone (Connection connection, String flatmate) throws SQLException {
 
 
         // Query vorbereiten - String
-        String sqlQuery = "SELECT Chore.timeRequiredHours" +
-                          "FROM Chore, FlatmateChore" +
-                          "WHERE FlatmateChore.chore = Chore.chore" +
+        String sqlQuery = "SELECT Chore.timeRequiredHours " +
+                          "FROM Chore, FlatmateChore " +
+                          "WHERE FlatmateChore.chore = Chore.chore " +
                           "AND FlatmateChore.name = ?";
 
 
@@ -60,9 +80,9 @@ public class Aufgabe_53_neu {
 
         // Query vorbereiten
 
-        String sqlQuery = "SELECT *" +
-                          "FROM FlatmateChore, Flatmate" +
-                          "WHERE Flatmate.name = FlatmateChore = name" +
+        String sqlQuery = "SELECT * " +
+                          "FROM FlatmateChore, Flatmate " +
+                          "WHERE Flatmate.name = FlatmateChore.name " +
                           "AND Flatmate.name = ?";
 
         try (PreparedStatement myStatement = connection.prepareStatement(sqlQuery)) {
@@ -78,6 +98,7 @@ public class Aufgabe_53_neu {
                 // LocalDate birthday = myResultSet.getDate("birthday").toLocalDate().withYear(year);
                 LocalDate birthday = LocalDate.parse (myResultSet.getString("birthday")).withYear(year);
 
+
                 // DoneAt als LocalDate
                 LocalDate doneAt = LocalDate.parse(myResultSet.getString("doneAt"));
 
@@ -85,7 +106,7 @@ public class Aufgabe_53_neu {
 
                 if (doneAt.isBefore(birthday) && doneAt.isAfter(birthday.minusDays(7))){
 
-                    System.out.println(myResultSet.getString("doneAt" + ": " + myResultSet.getString("chore")));
+                    System.out.println(myResultSet.getString("doneAt") + ": " + myResultSet.getString("chore"));
                 }
 
 
