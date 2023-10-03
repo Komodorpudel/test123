@@ -47,7 +47,7 @@ public class Student<T extends Number & Comparable<T>>{ // Class uses T which mu
         // Creates stream and returns
         return grades.stream()
                      // Find minimum - goes through list and compares each element with next
-                     .min(Comparator.naturalOrder())
+                     .min(Comparator.naturalOrder()) // alles andere kacke wegen T
                      // Throw exception
                      .orElse(null);
     }

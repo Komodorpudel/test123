@@ -10,7 +10,7 @@ public class BankAccountContainer_ME implements Iterable<BankAccount> {
 
     // Attribute
     private ArrayList<BankAccount> bankAccounts;
-    private static BankAccountContainer_ME unique; // Reference zu dem einen existierenden BankAccountContainer_ME
+    private static BankAccountContainer_ME unique; // Initialisierung von dem einen existierenden BankAccountContainer_ME
 
     private PropertyChangeSupport changes = new PropertyChangeSupport(this); // PropertyChangeSupport
 
@@ -48,7 +48,7 @@ public class BankAccountContainer_ME implements Iterable<BankAccount> {
 
         bankAccounts.add(b);
 
-        changes.firePropertyChange("BankAccount", null, b);
+        changes.firePropertyChange("BankAccount", null, b); // siehe oben PropertyChangeSupport changes
     }
 
     // Unlink

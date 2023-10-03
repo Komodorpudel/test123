@@ -54,7 +54,7 @@ public class SometimesCloseable extends JFrame implements Runnable, ActionListen
                     closeButton.setText("Du musst warten");
                     Thread.sleep(1000);
 
-                } // wenn disabled, dann auf enabled setzen und andersrum
+                } 
                 
                 else {
                     closeButton.setEnabled(true);

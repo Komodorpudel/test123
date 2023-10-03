@@ -12,8 +12,10 @@ public class Palindrom {
             System.out.println("Eingabe:");
 
             String line = myScanner.nextLine();
+            
 
             if (line.equalsIgnoreCase("End")) {
+                myScanner.close();
                 System.exit(0);
             }
 
@@ -25,7 +27,7 @@ public class Palindrom {
 
             String parsedString = removeUnnecessaryCharacters(line);
             boolean isPalindrome = isPalindrome(parsedString);
-            myScanner.close();
+
 
             if(isPalindrome == true) {
                 System.out.println("Ist Palindrom");
@@ -37,29 +39,21 @@ public class Palindrom {
             }
 
         }
-
-
-    
     }
         
-
-
     public static String removeUnnecessaryCharacters(String s) {
 
         return s.toLowerCase().replaceAll("[^a-z]", "");
 
     }
 
-    StringBuilder s = new StringBuilder("test");
-    s.re
-
-    String.
-
-
-
     public static boolean isPalindrome(String s) {
 
-        return true;
+        StringBuilder sb = new StringBuilder(s);
+        StringBuilder reversedsb = new StringBuilder(sb);
+        reversedsb.reverse();
+
+        return sb.toString().equals(reversedsb.toString());
     }
     
 }

@@ -7,7 +7,6 @@ public class Metronom implements Runnable {
 
     private Thread metronomThread;
 
-
     public Metronom (int x){
         this.x = x;
         start();
@@ -18,7 +17,7 @@ public class Metronom implements Runnable {
         if (metronomThread == null) {
             count = 1;
             metronomThread = new Thread(this);
-            metronomThread.start();
+            metronomThread.start(); // calls run below
         }
 
     }

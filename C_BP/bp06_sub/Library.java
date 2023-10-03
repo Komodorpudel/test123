@@ -70,7 +70,8 @@ public class Library {
     // SAH: displayBooks
     public void displayBooks() {
         // TO-DO Ausgabe aller Bücher unter Verwendung einer Methoden-Referenz von system.print (eine Codezeile!)
-        books.forEach(System.out::println);
+        // books.forEach(System.out::println);
+        books.forEach(b -> System.out.println(b));
 
         // System.out::println ist eine Methodenreferenz, die in Verbindung mit der forEach()-
         // Methode verwendet wird, um fur jedes Element einer Sequenz oder Sammlung die ¨ toString()-
