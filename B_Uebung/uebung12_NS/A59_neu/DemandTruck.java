@@ -5,7 +5,7 @@ public class DemandTruck extends Thread {
     private Warehouse warehouse;
     int value;
 
-    public DemandTruck(Warehouse warehouse, int value) {
+    public DemandTruck (Warehouse warehouse, int value) {
         this.warehouse = warehouse;
         this.value = value;
     }
