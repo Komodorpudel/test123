@@ -16,13 +16,14 @@ public class LabelCreatorListener_neu implements ActionListener {
     private JPanel receivedPanel;
     Random myRandom = new Random();
 
-
+    // Konstruktor
     public LabelCreatorListener_neu (JPanel centerPanel){
 
         receivedPanel = centerPanel;
         
     }
 
+    // actionPerformed
     @Override
     public void actionPerformed(ActionEvent e) {
 

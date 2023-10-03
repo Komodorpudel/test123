@@ -12,7 +12,7 @@ public class BankAccountContainer_ME implements Iterable<BankAccount> {
     private ArrayList<BankAccount> bankAccounts;
     private static BankAccountContainer_ME unique; // Reference zu dem einen existierenden BankAccountContainer_ME
 
-    private PropertyChangeSupport changes = new PropertyChangeSupport(this);
+    private PropertyChangeSupport changes = new PropertyChangeSupport(this); // PropertyChangeSupport
 
     // Konstruktor
     private BankAccountContainer_ME() {

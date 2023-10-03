@@ -44,7 +44,7 @@ public class TextFileFrame extends JFrame implements ActionListener {
             throw new RuntimeException(e);
         }
         
-        addWindowListener(new WindowAdapter() {
+        addWindowListener(new WindowAdapter() { // anonyme klasse
 
             // writer schliessen wenn das Fenster geschlossen wird
             @Override

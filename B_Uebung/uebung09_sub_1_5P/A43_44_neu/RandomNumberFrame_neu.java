@@ -18,8 +18,6 @@ public class RandomNumberFrame_neu extends JFrame {
 
         Random myRandom = new Random();
 
-
-
         for (int i = 0; i < n; i++){
 
             int x = myRandom.nextInt(100);
@@ -33,9 +31,7 @@ public class RandomNumberFrame_neu extends JFrame {
 
         setVisible(true);
 
-
     }
-
 
     public static void main (String [] args){
         new RandomNumberFrame_neu(20);

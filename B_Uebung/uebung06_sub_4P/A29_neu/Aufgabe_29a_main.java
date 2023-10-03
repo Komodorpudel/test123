@@ -13,13 +13,13 @@ import java.awt.Font;
 public class Aufgabe_29a_main extends JFrame {
 
     public Aufgabe_29a_main(){
+
         super("Aufgabe29a");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         Font myFont = new Font ("Arial", Font.PLAIN, 20);
 
         // North
-
         JPanel northPanel = new JPanel();
         northPanel.setBackground(new Color(200,200,200));
 
@@ -34,7 +34,6 @@ public class Aufgabe_29a_main extends JFrame {
         add(northPanel, BorderLayout.NORTH);
 
         // South
-
         JPanel southPanel = new JPanel();
         southPanel.setBackground(new Color(150,150,150));
 
@@ -46,6 +45,7 @@ public class Aufgabe_29a_main extends JFrame {
 
         add(southPanel, BorderLayout.SOUTH);
 
+        // finish
         pack();
         setVisible(true);
 
