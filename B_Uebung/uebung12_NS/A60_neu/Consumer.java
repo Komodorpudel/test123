@@ -17,6 +17,9 @@ public class Consumer extends Thread {
             while (true) {
                 int value = warehouse.consume(); // Muss int value machen, weil consume ja was returned
                 Thread.sleep(ThreadLocalRandom.current().nextInt(1,6)* 1000);
+
+                // Nur damit meldung nicht auftaucht
+                System.out.println(value);
                 
             }
         }
