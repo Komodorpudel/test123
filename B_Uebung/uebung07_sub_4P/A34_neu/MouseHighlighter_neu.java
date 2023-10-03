@@ -43,12 +43,18 @@ public class MouseHighlighter_neu extends JFrame {
 
         });
 
-
         // Finally
         setSize(300, 300);
         setVisible(true);
 
     }
+
+    // I cannot use paintComponent here because it is designed to be used with lightweight JComponent objects like JPanels
+
+    /*  public void paintComponents (Graphics g) {
+        super.paintComponents(g); // entfernt das vorher gezeichnete
+        g.drawOval(x - 15, y - 15,  30, 30);
+    } */
 
     public void paint (Graphics g) {
         super.paint(g); // entfernt das vorher gezeichnete
@@ -58,11 +64,5 @@ public class MouseHighlighter_neu extends JFrame {
     public static void main (String[] args) {
         new MouseHighlighter_neu();
     }
-
-
-    
-    
-
-
     
 }
