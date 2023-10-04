@@ -1,10 +1,10 @@
-package C_BP.bp12_sub;
+package C_BP.bp12_sub.Aufgabe_01;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Main {
+public class Main_V1 {
     public static void main(String[] args) {
         String filename = "meineDatei.txt";
         String neueZeile = "Dies ist eine neue Zeile.";

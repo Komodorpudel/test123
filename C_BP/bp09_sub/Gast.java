@@ -8,8 +8,8 @@ public class Gast {
     // --------------------------------------
 
     public static String status = "König";
-    private List<Bestellung> bestellungen = new ArrayList<>();
-    private List<Stammtisch> stammtische = new ArrayList<>();
+    private ArrayList<Bestellung> bestellungen = new ArrayList<>();
+    private ArrayList<Stammtisch> stammtische = new ArrayList<>(); // Nicht verlangt, weil laut UML Gast den Stammtisch nicht kennt, beachte Pfeilrichtung
 
     // --------------------------------------
 
@@ -28,6 +28,11 @@ public class Gast {
     public Bestellung getBestellung(int index) {
         return bestellungen.get(index);
     }
+
+
+    // Nachfolgendes nicht verlangt. Beachte Pfeilrichtung
+
+    
     
     public void linkStammtisch(Stammtisch stammtisch) {
         stammtische.add(stammtisch);

@@ -21,6 +21,7 @@ public class TextFileFrame extends JFrame implements ActionListener {
 
     // Konstruktor
     public TextFileFrame() {
+        
         super("Text file frame");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 

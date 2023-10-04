@@ -1,4 +1,4 @@
-package C_BP.bp12_sub;
+package C_BP.bp12_sub.Aufgabe_01;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

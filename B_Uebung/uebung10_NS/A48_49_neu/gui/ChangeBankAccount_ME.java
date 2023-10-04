@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-@SuppressWarnings("serial")
+// @SuppressWarnings("serial")
 public class ChangeBankAccount_ME extends JDialog implements ActionListener, PropertyChangeListener {
 
 

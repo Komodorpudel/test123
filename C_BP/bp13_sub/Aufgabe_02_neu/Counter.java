@@ -1,4 +1,4 @@
-package C_BP.bp13_sub;
+package C_BP.bp13_sub.Aufgabe_02_neu;
 
 public class Counter {
     private int count = 0;

@@ -1,7 +1,6 @@
 package C_BP.bp09_sub;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Restaurant {
 
@@ -9,8 +8,8 @@ public class Restaurant {
 
     private String kategorie;
     private String name;
-    private List<Stammtisch> stammtische = new ArrayList<>();
-    private List<Gast> gaeste = new ArrayList<>();
+    private ArrayList<Stammtisch> stammtische = new ArrayList<>();
+    private ArrayList<Gast> gaeste = new ArrayList<>();
 
     /////////////////////////////////////////////////////////////////////////
 
@@ -27,6 +26,8 @@ public class Restaurant {
     // Methoden zum Hinzufügen von Stammtischen und Gästen
     public void addStammtisch(Stammtisch stammtisch) {
         stammtische.add(stammtisch);
+
+        System.out.println(kategorie + name);
     }
 
     public boolean addGast(Gast gast) {

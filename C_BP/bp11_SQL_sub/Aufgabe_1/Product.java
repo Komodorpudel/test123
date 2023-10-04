@@ -1,4 +1,4 @@
-package C_BP.bp11_sub;
+package C_BP.bp11_SQL_sub.Aufgabe_1;
 
 // package Uebung_11;
 

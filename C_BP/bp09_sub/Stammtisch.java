@@ -1,15 +1,14 @@
 package C_BP.bp09_sub;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Stammtisch {
 
-    private List<Gast> gaeste;
+    private ArrayList<Gast> gaeste;
 
     ////////////////////////////////////////////////////////////
 
-    public Stammtisch(List<Gast> gaeste) {
+    public Stammtisch(ArrayList<Gast> gaeste) {
         if (gaeste.size() >= 3) {
             this.gaeste = gaeste;
         } else {
@@ -22,7 +21,7 @@ public class Stammtisch {
         gaeste.add(gast);
     }
 
-    public List<Gast> getGaeste() {
+    public ArrayList<Gast> getGaeste() {
         return gaeste;
     }
 
