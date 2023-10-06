@@ -18,6 +18,8 @@ public class ProductDAO {
     private static final String password = "Test3";
 
 
+    // -----------------------------------------------------------------------------
+
     public ProductDAO() {
 
         try {
@@ -30,6 +32,8 @@ public class ProductDAO {
 
     }
 
+    // -----------------------------------------------------------------------------
+
     public List<Product> getAllProducts() {
 
         ArrayList<Product> allProducts = new ArrayList<>();
@@ -39,6 +43,7 @@ public class ProductDAO {
 
         try (
               Statement statement = connection.createStatement();
+              // ResultSet kommt zurück
               ResultSet myResultSet = statement.executeQuery(query)
             ) {
 
@@ -62,13 +67,15 @@ public class ProductDAO {
 
     }
 
+    // -----------------------------------------------------------------------------
+
     public void updateProductPrice (int productId, double newPrice) {
 
         String query = "UPDATE Product " +
                        "SET price = ? " +
                        "WHERE id = ?";
         
-        PreparedStatement preparedStatement = null;
+        PreparedStatement preparedStatement = null; // machen wir hier weil finally block sonst nicht den block kennt
 
         try {
             preparedStatement = connection.prepareStatement(query);
@@ -76,6 +83,7 @@ public class ProductDAO {
             preparedStatement.setDouble(1, newPrice);
             preparedStatement.setInt(2, productId);
 
+            // Affected rows kommt zurück
             int rowsAffected = preparedStatement.executeUpdate();
 
             System.out.println("Rows affedcted: " + rowsAffected);
@@ -103,4 +111,7 @@ public class ProductDAO {
             }
         }
     }
+
+    // -----------------------------------------------------------------------------
+
 }

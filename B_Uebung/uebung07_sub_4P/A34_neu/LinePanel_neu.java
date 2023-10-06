@@ -46,7 +46,7 @@ public class LinePanel_neu extends JPanel {
 
     }
 
-/*     @Override
+    @Override
     public void paint (Graphics g){
 
         // Nur wenn nicht leer, dann:
@@ -63,8 +63,8 @@ public class LinePanel_neu extends JPanel {
 
         }
 
-    } */
-
+    }
+/* 
     @Override
     public void paintComponent (Graphics g) {
         super.paintComponents(g);
@@ -85,7 +85,7 @@ public class LinePanel_neu extends JPanel {
 
         }
 
-    }
+    } */
     
 }
 

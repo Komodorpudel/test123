@@ -1,4 +1,4 @@
-package D_Klausur.Klausur_SoSe23_02b;
+package D_Klausur.SoSe23.Aufgabe_02b;
 
 import java.lang.Integer;
 
@@ -57,7 +57,6 @@ public class Main {
     // --------------------------------------
 
     // Optional
-
     public static boolean isInteger(String s) {
         try {
             Integer.parseInt(s);
@@ -72,6 +71,7 @@ public class Main {
 
     // --------------------------------------
 
+    // Methode gegeben aus vorheriger Aufgabe
     public static ArrayList<Integer> removeDuplicatesB (int[] a){
 
         ArrayList <Integer> aWithoutDuplicates = new ArrayList<Integer>();

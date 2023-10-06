@@ -1,4 +1,4 @@
-package D_Klausur.Klausur_SoSe23_02a;
+package D_Klausur.SoSe23.Aufgabe_02a;
 
 import java.util.ArrayList;
 import java.util.Arrays;

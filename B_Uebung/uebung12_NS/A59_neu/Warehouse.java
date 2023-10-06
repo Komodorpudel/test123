@@ -31,6 +31,4 @@ public class Warehouse {
         w.print();
     }
 
-
-
 }

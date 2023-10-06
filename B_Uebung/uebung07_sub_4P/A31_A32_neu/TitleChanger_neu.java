@@ -18,10 +18,19 @@ public class TitleChanger_neu extends JFrame {
 
             JButton temp = new JButton("Button" + i);
 
+            // Zusammengekürzte Version von anonymer function siehe unten. Funktioniert nur bei funktionalen Schnittstellen mit einer Methode
             temp.addActionListener(e -> {
                 JButton source = (JButton) e.getSource();
                 setTitle("Title changed by " + source.getText());
             });
+
+        /*  temp.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton source = (JButton) e.getSource();
+                setTitle("Title changed by " + source.getText());
+            }
+        }); */
 
             add(temp);
 

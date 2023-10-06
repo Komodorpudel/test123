@@ -44,6 +44,7 @@ public class SometimesCloseable extends JFrame implements Runnable, ActionListen
         }
     }
 
+    // Brauche ich damit Thread etwas machen kann
     @Override
     public void run() {
 

@@ -20,7 +20,6 @@ public class Aufgabe_16b_neu {
 
         while (index.getMonth() == now.getMonth()){
 
-
             if(index.getDayOfWeek() == DayOfWeek.SATURDAY || index.getDayOfWeek() == DayOfWeek.SUNDAY){
                 weekend++;
             }

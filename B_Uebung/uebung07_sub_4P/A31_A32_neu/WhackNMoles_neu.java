@@ -35,7 +35,7 @@ public class WhackNMoles_neu extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        JButton source = (JButton) e.getSource(); // gibt mir nur eine reference zu dem Button, daher kann ich unten .setEnabled machen
+        JButton source = (JButton) e.getSource(); // gibt mir eine reference zu dem Button, daher kann ich unten .setEnabled machen
 
         source.setEnabled(false);
         this.numberOfMolesWhacked ++;

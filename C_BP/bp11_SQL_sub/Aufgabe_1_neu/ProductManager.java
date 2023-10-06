@@ -23,7 +23,6 @@ public class ProductManager {
 
 
         // 6. Benutzereingabe
-
         Scanner myScanner = new Scanner(System.in);
 
         System.out.println("Enter ID:");

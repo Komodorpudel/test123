@@ -16,7 +16,7 @@ public class DontMinimizeMe_neu extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new GridLayout(0,3));
 
-        addWindowListener(new WindowAdapter() { // anonyme Klasse hier
+        addWindowListener(new WindowAdapter() { // anonyme Klasse hier, Lambda funktioniert nicht, weil WindowAdapter mehr als eine Methode hat
 
             @Override
             public void windowIconified(WindowEvent e){

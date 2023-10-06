@@ -1,6 +1,7 @@
 package A_Skript.C5_Java_API;
 
 import java.util.ArrayList;
+//import java.util.Arrays;
 import java.util.List;
 import java.util.TreeSet;
 import java.util.function.Consumer;
@@ -17,7 +18,7 @@ public class C5_4_Lambda_Ausdrücke {
 
         public static void main (String[] args){
 
-        // +++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         //S37 - TreeSet mit forEach Methode und Lambda
         TreeSet<Integer> myTreeSet = new TreeSet<Integer>();
@@ -32,7 +33,7 @@ public class C5_4_Lambda_Ausdrücke {
 
         // Lambda geht nur mit Objecten, die bestimmte Schnittstellen implementieren
 
-        // +++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // S41 - Predicate
         // Gibt immer ein Boolean zurück
@@ -56,12 +57,12 @@ public class C5_4_Lambda_Ausdrücke {
                                             .collect(Collectors.toList());
         */
         List<Integer> evenNumbers = numbers.stream()
-                                    .filter(n -> n % 2 == 0)
+                                    .filter(n -> n % 2 == 0) // Predicate
                                     .collect(Collectors.toList());
 
         System.out.println(evenNumbers);  // [2, 4]
 
-        // +++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         //S41 - Function
         System.out.println("\nFunction:");
@@ -70,18 +71,18 @@ public class C5_4_Lambda_Ausdrücke {
 
         // Function<Integer, Integer> square = (Integer number) -> number * number;
         /* List<Integer> squaredNumbers = numbers2.stream()
-                                              .map(square)
+                                              .map(square) // Function
                                               .collect(Collectors.toList());
         */
         
         List<Integer> squaredNumbers = numbers2.stream()
-                                              .map(n -> n * n)
+                                              .map(n -> n * n) // Function
                                               .collect(Collectors.toList());
 
         System.out.println("Original numbers: " + numbers2);
         System.out.println("Squared numbers: " + squaredNumbers);
         
-        // +++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         //S43 - Lambda mit Consumer
         System.out.println("\nLambda with Consumer:");
@@ -89,22 +90,34 @@ public class C5_4_Lambda_Ausdrücke {
 
         myTreeSet.forEach(c);
 
-        // +++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // S44 - Consumer
         System.out.println("\nConsumer:");
         // A Consumer is a functional interface in Java that represents an operation that accepts a single input argument and returns no result. Its primary method is accept(T t).
         StringBuilder mySB = new StringBuilder("Ich bin ein StringBuilder");
 
-        Consumer <StringBuilder> myConsumer = (StringBuilder s ) -> {s.setLength(5);};
-
-        // System.out.println(myConsumer.accept(mySB)); Achtung, das geht nicht, weil der Consumer ja nichts returned
-
-        myConsumer.accept(mySB);
-
+        // Consumer <StringBuilder> myConsumer = (StringBuilder s) -> {s.setLength(5);};
         System.out.println(mySB);
 
-        // +++++++++++
+
+        /*      
+        public class ConsumerExample1 {
+            public static void main(String[] args) {
+                List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+                Consumer<Integer> printConsumer = num -> System.out.println(num);
+                numbers.forEach(printConsumer);
+        } */
+
+
+        // System.out.println(myConsumer.accept(mySB)); Achtung, das geht nicht, weil der Consumer ja nichts returned
+        // myConsumer.accept(mySB);
+
+        // System.out.println(mySB);
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // S44 - Supplier (z.B. für Stream.generate()
         System.out.println("\nSupplier:");
@@ -125,17 +138,25 @@ public class C5_4_Lambda_Ausdrücke {
 
     }
 
-        // +++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         
         // S47 - Methodenreferenz
 
         // anstatt Supplier normal:
-
         Supplier <Double> mySupplier2 = () -> Math.random();
 
         Supplier <Double> mySupplier3 = Math::random;
 
-        // +++++++++++
+        /*  
+        Supplier<Double> mySupplier2 = new Supplier<Double>() {
+            @Override
+            public Double get() {
+            return Math.random();
+            }
+        };
+        */
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // S49 - UnaryOperator
 
@@ -157,7 +178,7 @@ public class C5_4_Lambda_Ausdrücke {
 
         Function<Integer, Integer> square = x -> x * x;
 
-        // +++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 

@@ -11,7 +11,7 @@ public class Main {
 
         for (int i = 0; i < 3 ; i++){
 
-            Thread myThread = new Thread(new Runnable(){
+            Thread myThread = new Thread(new Runnable(){ // neuer Thread der ein anonyomes Objekt bekommt das Runnable implementiert und daher von Thread ausgeführt werden kann
                 public void run() {
                     for (int j = 0; j < 50; j++){
                         counter.increment();
@@ -20,7 +20,10 @@ public class Main {
                 }
             });
 
+            // Zu array hinzufügen
             myThreads.add(myThread);
+
+            // Starten
             myThread.start();
         }
 
@@ -34,5 +37,4 @@ public class Main {
             }
         }
     }
-    
 }

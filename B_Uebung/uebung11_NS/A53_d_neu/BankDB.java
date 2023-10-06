@@ -8,6 +8,7 @@ import B_Uebung.uebung06_sub_4P.A26_A27.BankAccount;
 
 public class BankDB {
 
+    // Würde im Konstruktor die Verbindung herstellen
     Connection connection;
 
 

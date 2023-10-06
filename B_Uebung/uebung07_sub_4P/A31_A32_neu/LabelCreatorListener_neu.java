@@ -18,9 +18,7 @@ public class LabelCreatorListener_neu implements ActionListener {
 
     // Konstruktor
     public LabelCreatorListener_neu (JPanel centerPanel){
-
         receivedPanel = centerPanel;
-        
     }
 
     // actionPerformed

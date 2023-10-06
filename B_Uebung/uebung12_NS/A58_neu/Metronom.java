@@ -9,18 +9,28 @@ public class Metronom implements Runnable {
 
     public Metronom (int x){
         this.x = x;
+
+        // Start
         start();
     }
 
+    // --------------------------------------------------
+
     public void start() {
 
+
+        // Das hätte ich eigentlich auch in den Konstruktor reinschmeißen können -> Nein warte; Problem: this würde dann nicht funktioniren glaube ich
         if (metronomThread == null) {
             count = 1;
             metronomThread = new Thread(this);
-            metronomThread.start(); // calls run below
+
+            // Run aufrufen
+            metronomThread.start();
         }
 
     }
+
+    // --------------------------------------------------
 
     public void stop() {
 
@@ -29,6 +39,8 @@ public class Metronom implements Runnable {
             metronomThread = null;
         }
     }
+
+    // --------------------------------------------------
 
     @Override
     public void run() {
@@ -50,6 +62,8 @@ public class Metronom implements Runnable {
 
         }
     }
+
+    // --------------------------------------------------
 
     public static void main (String [] args){
         new Metronom(10);

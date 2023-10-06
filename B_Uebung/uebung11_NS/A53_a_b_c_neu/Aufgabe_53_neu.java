@@ -32,7 +32,7 @@ public class Aufgabe_53_neu {
 
     }
 
-    // -----------------
+    // --------------------------------------------------------------------------------------------
 
     public static double getChoresDone (Connection connection, String flatmate) throws SQLException {
 
@@ -41,7 +41,6 @@ public class Aufgabe_53_neu {
                           "FROM Chore, FlatmateChore " +
                           "WHERE FlatmateChore.chore = Chore.chore " +
                           "AND FlatmateChore.name = ?";
-
 
         // Query vorbereiten und verbindung estabilishen
         try(PreparedStatement myStatement = connection.prepareStatement(sqlQuery)) {
@@ -72,7 +71,7 @@ public class Aufgabe_53_neu {
         return -1;
     }
 
-    // ---------------------------------
+    // --------------------------------------------------------------------------------------------
 
     public static void choresDoneBeforeBirthday (Connection connection, String flatmate, int year) {
 
@@ -119,8 +118,7 @@ public class Aufgabe_53_neu {
             
     }
 
-    // ----------------------------------
-
+    // --------------------------------------------------------------------------------------------
 
     
 }

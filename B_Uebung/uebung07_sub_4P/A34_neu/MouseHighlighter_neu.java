@@ -19,7 +19,7 @@ public class MouseHighlighter_neu extends JFrame {
         super ("Mouse Highlighter");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        addMouseMotionListener(new MouseMotionAdapter(){
+        addMouseMotionListener(new MouseMotionAdapter(){ // anonyme function
 
             @Override
             public void mouseMoved (MouseEvent e) {
@@ -60,6 +60,11 @@ public class MouseHighlighter_neu extends JFrame {
         super.paint(g); // entfernt das vorher gezeichnete
         g.drawOval(x - 15, y - 15,  30, 30);
     }
+
+
+/*     Das Graphics-Objekt wird automatisch vom System bereitgestellt,
+       wenn es paint() aufruft. Als Entwickler muss man sich in der Regel nicht darum kümmern, woher es kommt. */
+
 
     public static void main (String[] args) {
         new MouseHighlighter_neu();
