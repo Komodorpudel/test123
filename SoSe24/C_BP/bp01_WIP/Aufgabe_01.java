@@ -1,6 +1,6 @@
 package SoSe24.C_BP.bp01_WIP;
 
-public class Main {
+public class Aufgabe_01 {
 
     // -------------------------------------------------------
     public static String prepareWord(String input) { //Klassenmethode
