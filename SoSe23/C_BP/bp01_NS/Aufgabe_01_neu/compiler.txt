@@ -1,0 +1,4 @@
+javac Palindrom.java
+
+
+java Palindrom

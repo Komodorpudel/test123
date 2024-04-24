@@ -1,0 +1,4 @@
+javac Aufgabe_01.java
+
+
+java Main Geburt Bartgel Erbgut Betrug Bargeld
