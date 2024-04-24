@@ -1,4 +1,4 @@
-// package SoSe24.C_BP.bp01_WIP;
+package SoSe24.C_BP.bp01_WIP;
 
 public class Main {
 
