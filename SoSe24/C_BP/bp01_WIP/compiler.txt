@@ -1,4 +1,7 @@
 javac Aufgabe_01.java
 
+java Aufgabe_01.java Geburt, Bartgel, Erbgut, Betrug, Bargeld
 
-java Main Geburt Bartgel Erbgut Betrug Bargeld
+
+java -classpath Aufgabe_01
+java Aufgabe_01
