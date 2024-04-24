@@ -69,7 +69,9 @@ public class Aufgabe_01 {
 
             if (checkEquals(baseLetterCounts, currentLetterCounts)) {
                 System.out.println("\"" + currentWord + "\" ist ein Anagramm von \"" + baseWord + "\".");
-            } else {
+            }
+            
+            else {
                 System.out.println("\"" + currentWord + "\" ist kein Anagramm von \"" + baseWord + "\".");
             }
         }
