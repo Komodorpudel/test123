@@ -76,7 +76,6 @@ public class Aufgabe_53_neu {
     public static void choresDoneBeforeBirthday (Connection connection, String flatmate, int year) {
 
         // Query vorbereiten
-
         String sqlQuery = "SELECT * " +
                           "FROM FlatmateChore, Flatmate " +
                           "WHERE Flatmate.name = FlatmateChore.name " +
