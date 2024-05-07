@@ -43,7 +43,8 @@ public class Fraction extends Number implements Comparable<Fraction> {
     public int compareTo(Fraction other) {
         if (this.denominator.equals(other.denominator)) {
             return this.numerator.compareTo(other.numerator);
-        } else {
+        }
+        else {
             IntegerNumber commonDenominator = this.denominator.times(other.denominator);
             IntegerNumber newNumeratorThis = this.numerator.times(other.denominator);
             IntegerNumber newNumeratorOther = other.numerator.times(this.denominator);

@@ -8,9 +8,7 @@ public class IntegerNumber extends Number implements Comparable<IntegerNumber>{
     // Das interne Feld für den Wert der Zahl, der nicht verändert werden kann
     private final int value;
 
-    /**
-     * Standardkonstruktor, der ein IntegerNumber-Objekt mit dem Wert 0 erstellt.
-     */
+    // Standardkonstruktor, der ein IntegerNumber-Objekt mit dem Wert 0 erstellt.
     public IntegerNumber() {
         this.value = 0;
     }
