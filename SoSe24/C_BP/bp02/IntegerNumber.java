@@ -42,4 +42,6 @@ public class IntegerNumber extends Number implements Comparable<IntegerNumber>{
     public IntegerNumber times(IntegerNumber factor) {
         return new IntegerNumber(this.value * factor.value);
     }
+
+
 }
