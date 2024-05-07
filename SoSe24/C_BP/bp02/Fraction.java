@@ -8,9 +8,7 @@ public class Fraction extends Number implements Comparable<Fraction> {
     private final IntegerNumber numerator;
     private final IntegerNumber denominator;
 
-    /**
-     * Standardkonstruktor, der den Bruch als 0/1 definiert.
-     */
+    // Standardkonstruktor, der den Bruch als 0/1 definiert.
     public Fraction() {
         this.numerator = new IntegerNumber(0);
         this.denominator = new IntegerNumber(1);
@@ -48,6 +46,7 @@ public class Fraction extends Number implements Comparable<Fraction> {
             IntegerNumber commonDenominator = this.denominator.times(other.denominator);
             IntegerNumber newNumeratorThis = this.numerator.times(other.denominator);
             IntegerNumber newNumeratorOther = other.numerator.times(this.denominator);
+            
             return new Fraction(newNumeratorThis, commonDenominator).compareTo(new Fraction(newNumeratorOther, commonDenominator));
         }
     }
