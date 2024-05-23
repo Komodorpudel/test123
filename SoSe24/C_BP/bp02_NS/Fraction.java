@@ -1,4 +1,4 @@
-package SoSe24.C_BP.bp02;
+package SoSe24.C_BP.bp02_NS;
 
 /**
  * Repräsentiert einen mathematischen Bruch als Zähler/Nenner.

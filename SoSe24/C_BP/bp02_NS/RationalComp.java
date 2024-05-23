@@ -1,4 +1,4 @@
-package SoSe24.C_BP.bp02;
+package SoSe24.C_BP.bp02_NS;
 
 import java.util.Scanner; // Der Import ist nötig, um den Scanner zu nutzen.
 
