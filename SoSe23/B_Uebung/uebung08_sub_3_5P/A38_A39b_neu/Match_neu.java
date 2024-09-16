@@ -4,6 +4,7 @@ public class Match_neu {
 
     Team_neu team1;
     Team_neu team2;
+    Team_neu winner;
 
     public Match_neu(Team_neu team1, Team_neu team2, Team_neu winner) {
 
@@ -16,6 +17,12 @@ public class Match_neu {
         else if (!winner.equals(team1) && !winner.equals(team2)){
             throw new IllegalArgumentException("Es muss einen Sieger geben");
         }
+
+        this.team1 = team1
+        this.team2 = team2
+        this.winner = winner
+
+        // Think of a database where you enter matches
 
     }
     

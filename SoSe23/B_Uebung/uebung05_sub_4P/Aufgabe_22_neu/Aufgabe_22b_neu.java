@@ -8,7 +8,8 @@ public class Aufgabe_22b_neu {
 
     public static void main (String[] args){
 
-        IntSupplier mySupplier = () ->{
+        // Lambda method for intSupplier:
+        IntSupplier mySupplier = () -> {
 
             int [] array = {2, 3, 5, 7};
 
@@ -17,6 +18,10 @@ public class Aufgabe_22b_neu {
             return array[myRandom.nextInt(4)];
 
         };
+
+        // Single expression instead:
+        // IntSupplier mySupplier = () -> new int[]{2, 3, 5, 7}[new Random().nextInt(4)];
+
 
         IntStream myStream = IntStream.generate(mySupplier);
 

@@ -11,7 +11,7 @@ public class Aufgabe_18b {
     // --------------------------------------
 
     public static double averageRelativeDeltaFromMean(Map<Integer, Integer> map) {
-        
+
         // 1. zuerst den Durchschnittswert der Values f¨ur alle Keys berechne
         double sum = 0.0;
 
@@ -20,13 +20,15 @@ public class Aufgabe_18b {
         }
         double avg = sum / map.size();
 
-        // 2. f¨ur jeden Key die relative absolute Abweichung von diesem Durchschnittswert berechnet
+        // 2. f¨ur jeden Key die relative absolute Abweichung von diesem
+        // Durchschnittswert berechnet
         double sumRelativeDeltas = 0.0;
 
         for (Integer value : map.values()) {
             sumRelativeDeltas = sumRelativeDeltas + Math.abs(value - avg) / avg;
         }
-        // 3. den Durchschnitt dieser relativen Abweichungen f¨ur alle Keys berechnet und zur¨uckgibt.
+        // 3. den Durchschnitt dieser relativen Abweichungen f¨ur alle Keys berechnet
+        // und zur¨uckgibt.
         return sumRelativeDeltas / map.size();
     }
 
@@ -47,16 +49,18 @@ public class Aufgabe_18b {
 
         for (int i = 0; i < 10; i = i + 1) {
             int num = rand.nextInt(10);
-        
+
             // ... zählen Sie deren Vorkommen in Ihrer Map
             map.put(num, map.get(num) + 1);
         }
 
-        // 3. Berechnen Sie die durchschnittliche relative Abweichung und geben diese aus
+        // 3. Berechnen Sie die durchschnittliche relative Abweichung und geben diese
+        // aus
         double avgRelDelta = averageRelativeDeltaFromMean(map);
         System.out.println("Durchschnittliche relative Abweichung: " + avgRelDelta);
 
-        // 4. Erzeugen Sie dann so lange zufällige Zahlen zwischen 0 und 9, bis die durchschnittliche relative Abweichung weniger als 0.01 beträgt
+        // 4. Erzeugen Sie dann so lange zufällige Zahlen zwischen 0 und 9, bis die
+        // durchschnittliche relative Abweichung weniger als 0.01 beträgt
         while (avgRelDelta >= 0.01) {
 
             // Generiere Zufallszahl zwischen 0 und 9
@@ -78,5 +82,5 @@ public class Aufgabe_18b {
     }
 
     // --------------------------------------
-    
+
 }

@@ -4,8 +4,8 @@ public class Aufgabe_12a_new {
 
     public static void main(String[] args) {
 
-
         // CharSequence is an Interface, but as any Interface can also be an object
+        // String implements CharSequence, but as said above, Interfaces can also be objects
         CharSequence[] charArray = new CharSequence[args.length];
 
         System.arraycopy(args, 0, charArray, 0, args.length);

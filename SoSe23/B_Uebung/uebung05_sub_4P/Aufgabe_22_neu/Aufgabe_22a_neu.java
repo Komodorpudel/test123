@@ -9,9 +9,10 @@ public class Aufgabe_22a_neu {
 
         Random myRandom = new Random();
 
+        // The ints method of Random creates a IntStream object
         IntStream ints = myRandom.ints(1000,0,100);
 
-        int sum = ints.map(n -> n/10)
+        int sum = ints.map(n -> n/10) // filter(n -> n/10 == 0) using a Predicate to filter isntead of map
                         .distinct()
                         .sum();
 

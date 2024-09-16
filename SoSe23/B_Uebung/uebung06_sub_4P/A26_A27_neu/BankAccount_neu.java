@@ -5,22 +5,21 @@ import java.time.LocalDate;
 public class BankAccount_neu {
 
     private String accountHolderName; // wir setzen alles auf private, weil wir es ja über die getter und setter be
-    private String accountNumber;
-    private final LocalDate openingDate;
+    private String accountNumber; // Cannot set private her, otherwise i can not init it later
+    private final LocalDate openingDate; // but works here, because i init it directly in constructor
+    // with final i have to do it directly or in constructor directly
     private double accountBalance;
 
 
     public BankAccount_neu(String accountHolderName, String accountNumber){
 
         this.setAccountHolderName(accountHolderName);
-        this.setAccountNumber(accountNumber);
+        this.setAccountNumber(accountNumber); 
         this.openingDate = LocalDate.now();
         this.accountBalance = 0;
 
         
     }
-
-
 
     public static boolean checkAccountHolderName (String accountHolderName){
         if (accountHolderName != null && accountHolderName.matches("[A-Z][a-z]*(\\s[A-Z][a-z]*)*")) {
@@ -50,7 +49,7 @@ public class BankAccount_neu {
         }
     }
 
-    public void setAccountNumber(String accountNumber){
+    private void setAccountNumber(String accountNumber){
 
         if (checkAccountNumber(accountNumber)){
             this.accountNumber = accountNumber;
@@ -89,7 +88,7 @@ public class BankAccount_neu {
 
     @Override
     public String toString() {
-        return "AccountHolderName" + accountHolderName + "AccountNumber" + accountNumber + "AccountBalance:" + accountBalance;
+        return "AccountHolderName: " + accountHolderName + " // AccountNumber: " + accountNumber + " // AccountBalance: " + accountBalance;
     }
 
     @Override

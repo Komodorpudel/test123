@@ -25,7 +25,7 @@ public class Warehouse {
         t1.start();
         t2.start();
 
-        t1.join();
+        t1.join(); // the calling thread (in this case main) waits for t1 and then t2
         t2.join();
 
         w.print();

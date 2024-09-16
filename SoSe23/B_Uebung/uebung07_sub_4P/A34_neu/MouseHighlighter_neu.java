@@ -17,9 +17,9 @@ public class MouseHighlighter_neu extends JFrame {
     public MouseHighlighter_neu(){
 
         super ("Mouse Highlighter");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        addMouseMotionListener(new MouseMotionAdapter(){ // anonyme function
+        this.addMouseMotionListener(new MouseMotionAdapter(){ // anonyme Class/method
 
             @Override
             public void mouseMoved (MouseEvent e) {
@@ -27,7 +27,8 @@ public class MouseHighlighter_neu extends JFrame {
                 x = e.getX();
                 y = e.getY();
 
-                repaint();
+                MouseHighlighter_neu.this.repaint();
+
                 
             }
 
@@ -37,15 +38,16 @@ public class MouseHighlighter_neu extends JFrame {
                 x = e.getX();
                 y = e.getY();
 
-                repaint();
+                repaint(); // repaint ultimately calls paint
+                // Anonymous Class know of MouseHighlighter because it was created within
 
             }
 
         });
 
         // Finally
-        setSize(300, 300);
-        setVisible(true);
+        this.setSize(300, 300);
+        this.setVisible(true);
 
     }
 

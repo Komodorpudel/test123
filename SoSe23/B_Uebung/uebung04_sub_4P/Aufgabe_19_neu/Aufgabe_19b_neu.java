@@ -9,6 +9,7 @@ public class Aufgabe_19b_neu {
 
     public static void main (String[] args){
 
+        // Liste erzeugen und befüllen
         List<Integer> myIntegerList = new ArrayList<>();
 
         Random myRandom = new Random();
@@ -17,9 +18,19 @@ public class Aufgabe_19b_neu {
             myIntegerList.add(myRandom.nextInt(1000));
         }
 
+        // Alle geraden Zahlen quadrieren
         myIntegerList.replaceAll(x -> x % 2 == 0 ? x * x : x);
 
+        // Using Unary:
+        // UnaryOperator<Integer> squareEvenNumbers = x -> x % 2 == 0 ? x * x : x;
+        // myIntegerList.replaceAll(squareEvenNumbers);
+
+        // Methodreference:
         myIntegerList.forEach(System.out::println);
+
+        // Lambda:
+        // myIntegerList.forEach(x -> System.out.println(x));
+
 
         Predicate<Integer> isPrime = i -> {
 

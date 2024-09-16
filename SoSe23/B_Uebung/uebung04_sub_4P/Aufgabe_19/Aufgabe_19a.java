@@ -21,6 +21,9 @@ public class Aufgabe_19a {
         //    Zeichenkette zu Großbuchstaben konvertiert,
         UnaryOperator<String> toUpperCase = String::toUpperCase;
 
+        // UnaryOperator<String> toUpperCase = x -> x.toUpperCase();
+
+
         /* In Java, UnaryOperator<String> toUpperCase = String::toUpperCase; is a method reference that creates a UnaryOperator<String> which transforms a given string to uppercase.
 
         UnaryOperator<String> specifies that it's an operation with a single operand of type String, that returns a result of type String.

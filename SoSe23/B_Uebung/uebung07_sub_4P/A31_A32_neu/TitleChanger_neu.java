@@ -18,12 +18,15 @@ public class TitleChanger_neu extends JFrame {
 
             JButton temp = new JButton("Button" + i);
 
-            // Zusammengekürzte Version von anonymer function siehe unten. Funktioniert nur bei funktionalen Schnittstellen mit einer Methode
-            temp.addActionListener(e -> {
+            // Zusammengekürzte Version von anonymer function siehe unten. Funktioniert nur bei funktionalen Schnittstellen mit einer Methode (interfaces with exactely one abstract method)
+
+            // Lambda Expression:
+            temp.addActionListener(e -> { // Compiler knows because of the context (addActionListener) that we wanna create an ActionListener and override actionPerformed (because it is an functional interface)
                 JButton source = (JButton) e.getSource();
                 setTitle("Title changed by " + source.getText());
             });
 
+            // Anonymoues Inner Class:
         /*  temp.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

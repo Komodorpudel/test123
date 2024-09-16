@@ -16,15 +16,15 @@ public class Player_neu {
     public void linkTeam (Team_neu team){
 
         if (this.team != null) {
-            this.team.unlinkPlayer(this);
+            this.team.unlinkPlayer(this); // if already in a team, wo unlink player
         }
         
-        this.team = team;
+        this.team = team; // Player gets info which team he belongs to
 
 
         if (!team.getlinkPlayers().contains(this)){
 
-            team.linkPlayer(this);
+            team.linkPlayer(this); // team gets info that player belongs to team
 
         }
 

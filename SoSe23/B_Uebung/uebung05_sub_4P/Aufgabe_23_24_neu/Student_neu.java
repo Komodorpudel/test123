@@ -5,12 +5,14 @@ public class Student_neu {
     String name;
     int matrikelnummer;
 
+    // --------------------------------------
     public Student_neu(String name, int matrikelnummer){
         setName(name);
         setMatrikelnummer(matrikelnummer);
 
     }
 
+    // --------------------------------------
     public void setName(String name){
         if (checkName(name) == true){
             this.name = name;
@@ -21,6 +23,7 @@ public class Student_neu {
         }
     }
 
+    // --------------------------------------
     public void setMatrikelnummer(int matrikelnummer) {
 
         if (checkMatrikelnummer(matrikelnummer) == true) {
@@ -31,14 +34,17 @@ public class Student_neu {
         }
     }
 
+    // --------------------------------------
     public String getName() {
         return name;
     }
 
+    // --------------------------------------
     public int getMatrikelnummer() {
         return matrikelnummer;
     }
 
+    // --------------------------------------
     public boolean checkName(String name) {
         if (name != null && name.length() > 0 && Character.isUpperCase(name.charAt(0))) {
             return true;
@@ -48,6 +54,7 @@ public class Student_neu {
         }
     }
 
+    // --------------------------------------
     public boolean checkMatrikelnummer (int matrikelnummer) {
         if (matrikelnummer >= 1000000 && matrikelnummer <= 9999999){
             return true;
@@ -56,6 +63,7 @@ public class Student_neu {
 
     }
 
+    // --------------------------------------
     @Override
     public String toString(){
         return "(" + matrikelnummer + "," + name +")";

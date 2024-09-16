@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Aufgabe_06a_neu {
 
-    public static void main (String[] args){
+    public static void main (String[] args) {
         Scanner myScanner = new Scanner (System.in);
 
         System.out.println("Zahl eingeben:");
@@ -13,7 +13,6 @@ public class Aufgabe_06a_neu {
         System.out.println(n);
 
         myScanner.close();
-
 
     }
     

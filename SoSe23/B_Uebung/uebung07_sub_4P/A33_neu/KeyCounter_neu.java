@@ -13,7 +13,7 @@ public class KeyCounter_neu extends JFrame {
         super("KeyCounter: 0");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        addKeyListener(new KeyAdapter() {
+        this.addKeyListener(new KeyAdapter() {
 
             @Override
             public void keyPressed (KeyEvent e){
@@ -30,6 +30,8 @@ public class KeyCounter_neu extends JFrame {
             }
 
         });
+
+        setFocusable(true);
 
         // Finish
         //pack(); // zu klein

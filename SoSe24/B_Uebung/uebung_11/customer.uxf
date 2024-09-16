@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>240</y>
+      <w>370</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+-id: Integer
+-firstName: String
+-lastName: String
+--
++Customer(id: Integer, firstName: String, lastName: String)
++getId(): Integer
++setId(id: Integer)
++getFirstName(): String
++setFirstName(firstName: String)
++getLastName(): String
++setLastName(lastName: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>570</y>
+      <w>300</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>CustomerContainer
+--
+_-unique:CustomerContainer_
+--
+-CustomerContainer() {PersistenceException}
+_+instance():CustomerContainer_
+iterator(): Iterator&lt;Customer&gt;
++addCustomer(customer: Customer)
+    {CustomerException}
++removeCustomer(customer: Customer)
++updateCustomer(customer: Customer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>460</y>
+      <w>240</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>template=Customer
+&lt;&lt;interface&gt;&gt;
+java.lang.Iterable
+--
+iterator(): Iterator&lt;Customer&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>440</y>
+      <w>150</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+r2=-customers
+m2=[0..*]
+{id must be unique}</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>530</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>400</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CustomerException
+--
++CustomerException(msg: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>320</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>java.lang.Exception</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>340</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>240</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>java.lang.Throwable</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>260</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>

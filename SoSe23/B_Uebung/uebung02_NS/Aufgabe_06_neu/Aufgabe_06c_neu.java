@@ -8,10 +8,10 @@ public class Aufgabe_06c_neu {
 
         int sum = 0;
 
-        for (int i = 0; i < args.length; i++){
+        for (int i = 0; i < args.length; i++) {
             Scanner myScanner = new Scanner(args[i]);
 
-            while (myScanner.hasNextInt()){
+            while (myScanner.hasNextInt()) {
                 sum = sum + myScanner.nextInt();
             }
 
@@ -21,7 +21,6 @@ public class Aufgabe_06c_neu {
 
         System.out.println(sum);
         
-
     }
     
 }

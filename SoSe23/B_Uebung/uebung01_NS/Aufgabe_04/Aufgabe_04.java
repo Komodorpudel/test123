@@ -2,7 +2,7 @@ package SoSe23.B_Uebung.uebung01_NS.Aufgabe_04;
 
 public class Aufgabe_04 {
 
-    public static void main (String[]args){
+    public static void main (String[]args) {
 
     String test = "Ich hasse mein Leben";
 
@@ -14,13 +14,13 @@ public class Aufgabe_04 {
 
         String[] myString = s.split(" ");
 
-        for (String h : myString){
+        for (String h : myString) {
             System.out.println(h);
         }
 
         String reverseString = "";
 
-        for (int i = 0; i < myString.length; i++){
+        for (int i = 0; i < myString.length; i++) {
 
             reverseString = reverseString.concat(new StringBuilder(myString[i]).reverse().toString());
             reverseString = reverseString.concat(" ");

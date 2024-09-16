@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Aufgabe_06b_neu {
 
-    public static void main (String[] args){
+    public static void main (String[] args) {
         Scanner myScanner = new Scanner (System.in);
 
         int n;
 
         System.out.println("Zahl eingeben:");
 
-        if (myScanner.hasNextInt()) {
+        if (myScanner.hasNextInt()) { // Returns true oder false
 
             if ((n = myScanner.nextInt()) <= 50 && n >= 0){
 

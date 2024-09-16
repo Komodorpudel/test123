@@ -27,7 +27,6 @@ public class Aufgabe_29b_main extends JFrame {
 
         southPanel.setLayout(new GridLayout(0, 3));
 
-
         for (int number : numbers){
             southPanel.add(new JButton(String.valueOf(number)));
         }
@@ -39,7 +38,6 @@ public class Aufgabe_29b_main extends JFrame {
         // Finish
         pack();
         setVisible(true);
-
 
     }
 

@@ -16,11 +16,8 @@ public class BankAccount_neu {
         this.setAccountNumber(accountNumber);
         this.openingDate = LocalDate.now();
         this.accountBalance = 0;
-
         
     }
-
-
 
     public static boolean checkAccountHolderName (String accountHolderName){
         if (accountHolderName != null && accountHolderName.matches("[A-Z][a-z]*(\\s[A-Z][a-z]*)*")) {
@@ -50,7 +47,7 @@ public class BankAccount_neu {
         }
     }
 
-    public void setAccountNumber(String accountNumber){
+    private void setAccountNumber(String accountNumber){
 
         if (checkAccountNumber(accountNumber)){
             this.accountNumber = accountNumber;

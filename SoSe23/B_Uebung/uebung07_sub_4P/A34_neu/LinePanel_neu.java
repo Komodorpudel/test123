@@ -18,23 +18,23 @@ public class LinePanel_neu extends JPanel {
     private final ArrayList <Point> points = new ArrayList<>();
 
     public LinePanel_neu(){
-        super();
+        super(); // No this. because the object does not exist yet
         // setSize(300, 300);
-        setPreferredSize(new Dimension(300,300));
+        this.setPreferredSize(new Dimension(300,300));
 
-        addMouseListener (new MouseAdapter(){
+        this.addMouseListener (new MouseAdapter(){
             @Override
             public void mouseReleased (MouseEvent e) {
                 previewPoint = e.getPoint();
-                points.add(previewPoint);
-                repaint();  
+                LinePanel_neu.this.points.add(previewPoint);
+                LinePanel_neu.this.repaint();  
             }
 
         });
 
         // ----
 
-        addMouseMotionListener (new MouseMotionAdapter(){
+        this.addMouseMotionListener (new MouseMotionAdapter(){
             @Override
             public void mouseDragged (MouseEvent e){
                 previewPoint = e.getPoint();
@@ -42,7 +42,7 @@ public class LinePanel_neu extends JPanel {
             }
         });
 
-        setSize(300,300);
+        this.setSize(300,300);
 
     }
 
@@ -56,7 +56,7 @@ public class LinePanel_neu extends JPanel {
             for(int i = 1; i <points.size(); i++){
                 g.drawLine(previousPoint.x, previousPoint.y, points.get(i).x, points.get(i).y);
 
-                previousPoint = points.get(i);
+                previousPoint = points.get(i); // previous point auf aktuellen Punkt setzen
             }
 
             g.drawLine(previousPoint.x, previousPoint.y, previewPoint.x, previewPoint.y);

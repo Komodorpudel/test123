@@ -10,7 +10,7 @@ public class Aufgabe_02d {
         else{
             String str = "";
 
-            for (int i = 0; i < args.length; i++){
+            for (int i = 0; i < args.length; i++) {
                 str.concat(args[i].replace("STOP", "."));
                 str.concat("\n");
             }
